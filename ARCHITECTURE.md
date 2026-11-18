@@ -53,7 +53,7 @@
 
 满足任一即归档，并在描述开头写明 `Archived: superseded by X` 或 `归档：不再推进`：
 
-- 能力已被同领域后继仓库覆盖（例：`bwa-rust` → `minibwa-rust`，`swift-duck` → `fq-compressor`）；
+- 能力已被同领域后继仓库覆盖（例：`bwa-rust` → `minibwa-rust`，`open-infra-ai` → `portfolio`）；
 - 领域主线整体停止投入（例：生信主线转入维护模式）；
 - 赛期与赛后整理均已结束。
 
