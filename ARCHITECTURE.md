@@ -115,5 +115,10 @@
 
 ## 9. 未决事项
 
-- `open-genomics` 计划更名为 `holtwood-genomics`（GitHub 组织改名只能通过网页端 Settings 完成）。改名后需同步：本文件、`README.md` 架构表、`methodology.md`、`holtwood/holtwood` Profile、`holtwood-genomics` 组织内 4 处 `open-genomics.github.io` 引用。
-- `electronic` 组织当前为空组织（0 仓库、无描述），待定：删除，或赋予明确职责（硬件/电子方向）。
+以下三项都需要人工在网页端操作，脚本或 API 无法代为完成：
+
+1. **`open-genomics` → `holtwood-genomics` 改名**。`PATCH /orgs/{org}` 会静默忽略 `login` 字段，GitHub 只允许在 Settings → Account → Change organization's account name 完成。改名后需同步 4 处 `open-genomics.github.io` 引用（`fq-compressor`、`micos-2024`）与本文件、`README.md`、`methodology.md`、`holtwood/holtwood` Profile。
+2. **`holtwood/repos-db` 的 `AUDIT_TOKEN` 与 `holtwood/stars-db` 的 `STARS_TOKEN` 未轮换**。两个 workflow 自 2026-11-09 起持续报 `Bad credentials (HTTP 401)`；索引目前靠本地手动审计维持（见 §8）。
+3. **`electronic` 组织不可管理**。`GET /orgs/electronic/teams` 返回 403，说明当前账号不是其 admin，因此无法删除或改描述。它不属于本架构，保持现状即可。
+
+已收敛（勿重复讨论）：`repos-db` / `stars-db` 保留原名（§6）；`career-prep` 归个人号、`ai-infra-interview-prep` 归档；竞赛仓一律进 `holtwood-arena`。
