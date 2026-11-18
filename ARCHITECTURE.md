@@ -101,6 +101,9 @@
 - 私有仓库的名称与描述不进入公开文档，只进入公开统计数字。
 - 索引层只有 `repos-db`（公开）与 `repos-db-private`（私有）维护仓库清单；其余页面是视图，冲突时以 `repos-db` 为准。
 - 公开文档中出现性能数字时，必须绑定硬件、提交与测量方式；无复现路径的数字标注为"未独立复现"。
+- **有 Pages 站点的仓库必须填 homepage**，且指向当前组织名下的 URL。组织改名不会重定向项目站点，
+  旧组织域名的链接会直接 404（2026-11 已修复 4 处 `open-infra-ai.github.io` 死链）。
+- 文档载体固定为 README / `docs/` / Pages；不启用 Wiki 与 Projects 作为文档源（保持默认或关闭即可）。
 
 ## 8. 运维要求
 
@@ -122,3 +125,16 @@
 3. **`electronic` 组织不可管理**。`GET /orgs/electronic/teams` 返回 403，说明当前账号不是其 admin，因此无法删除或改描述。它不属于本架构，保持现状即可。
 
 已收敛（勿重复讨论）：`repos-db` / `stars-db` 保留原名（§6）；`career-prep` 归个人号、`ai-infra-interview-prep` 归档；竞赛仓一律进 `holtwood-arena`。
+
+## 10. 本地工作区
+
+本地镜像与远端同构，路径固定为 `~/github/<账号>/<仓库名>`：
+
+- 仓库改名或迁移后，**本地目录与 `origin` 必须同步改**，否则下次 `git pull` 会落到旧路径或旧组织。
+- 允许在某个仓库内部放**嵌套工作副本**（例如 `muse-spark-open-kernel-challenge/serving/sglang`），
+  但它的 `origin` 必须指向真实仓库；这类副本不计入镜像清单。
+- 日常同步：先 `git fetch --prune`，再看 `HEAD..@{u}`；只允许 `--ff-only`，不做隐式合并。
+- 出现 `ahead > 0` 且远端已重写历史（例：`flagos-s2-track1` 本地 ahead 91 / behind 141）时**不自动处理**，
+  需要人工判断保留哪一侧。
+- 默认分支：**新建仓库用 `main`**；存量 32 个 `master` 不做批量改名（改名会打断 clone、badge 与 CI 引用，
+  收益为零），fork 一律跟随上游分支名。

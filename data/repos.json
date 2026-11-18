@@ -3,7 +3,7 @@
   "accounts": {
     "holtwood": {
       "public": 11,
-      "private": 19,
+      "private": 18,
       "forks": 0,
       "note": "个人身份 / 索引 / 私有实验"
     },
@@ -15,7 +15,7 @@
     },
     "holtwood-arena": {
       "public": 6,
-      "private": 30,
+      "private": 31,
       "forks": 0,
       "note": "比赛与 benchmark"
     },
@@ -384,7 +384,7 @@
       "property": "fork",
       "upstream": "vllm-project/vllm",
       "ahead": 14,
-      "behind": 6035,
+      "behind": 6041,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -402,7 +402,7 @@
       "property": "fork",
       "upstream": "sgl-project/sglang",
       "ahead": 12,
-      "behind": 6573,
+      "behind": 6577,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -420,7 +420,7 @@
       "property": "fork",
       "upstream": "NVIDIA/TensorRT-LLM",
       "ahead": 1,
-      "behind": 2949,
+      "behind": 2950,
       "language": "Python/C++",
       "priority": "P2",
       "categories": [

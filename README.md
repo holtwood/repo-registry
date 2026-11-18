@@ -85,9 +85,9 @@
 <!-- AUTO:start accounts -->
 | 账号 | 可见仓库 | 公开 | 私有 | Fork |
 |------|---------|------|------|------|
-| holtwood（个人身份 / 索引 / 私有实验） | 30 | 11 | 19 | 0 |
+| holtwood（个人身份 / 索引 / 私有实验） | 29 | 11 | 18 | 0 |
 | holtwood-systems（AI Infra / HPC 系统） | 12 | 9 | 3 | 0 |
-| holtwood-arena（比赛与 benchmark） | 36 | 6 | 30 | 0 |
+| holtwood-arena（比赛与 benchmark） | 37 | 6 | 31 | 0 |
 | holtwood-forks（上游研读） | 32 | 32 | 0 | 31 |
 | holtwood-projects（历史应用与工具 · 维护模式） | 24 | 23 | 1 | 0 |
 | open-genomics（生信旧主线 · 维护模式） | 13 | 9 | 4 | 0 |
