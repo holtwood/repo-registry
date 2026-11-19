@@ -2,7 +2,7 @@
   "audited_at": "2026-11-19",
   "accounts": {
     "holtwood": {
-      "public": 11,
+      "public": 13,
       "private": 18,
       "forks": 0,
       "note": "个人身份 / 索引 / 私有实验"
@@ -57,6 +57,21 @@
       "links_ok": true
     },
     {
+      "name": "repos-db",
+      "account": "holtwood",
+      "visibility": "public",
+      "property": "meta",
+      "language": "HTML",
+      "domain": "重定向",
+      "ai_relevance": "低",
+      "resume_level": "低",
+      "categories": [],
+      "notes": {
+        "repo-registry": "旧名 Pages 跳转仓，仅保留 /repos-db/ 子路径跳转"
+      },
+      "links_ok": true
+    },
+    {
       "name": "stars-index",
       "account": "holtwood",
       "visibility": "public",
@@ -72,6 +87,21 @@
       "notes": {
         "holtwood-owned": "1300+ Star 项目分类索引",
         "tools-and-unrelated": "1300+ Star 项目分类索引（本 Hub 不复制其内容）"
+      },
+      "links_ok": true
+    },
+    {
+      "name": "stars-db",
+      "account": "holtwood",
+      "visibility": "public",
+      "property": "meta",
+      "language": "HTML",
+      "domain": "重定向",
+      "ai_relevance": "低",
+      "resume_level": "低",
+      "categories": [],
+      "notes": {
+        "stars-index": "旧名 Pages 跳转仓，仅保留 /stars-db/ 子路径跳转"
       },
       "links_ok": true
     },
@@ -366,7 +396,7 @@
       "property": "fork",
       "upstream": "flashinfer-ai/flashinfer",
       "ahead": 8,
-      "behind": 3427,
+      "behind": 3428,
       "language": "Python/CUDA",
       "priority": "P2",
       "categories": [
@@ -384,7 +414,7 @@
       "property": "fork",
       "upstream": "vllm-project/vllm",
       "ahead": 14,
-      "behind": 6157,
+      "behind": 6159,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -402,7 +432,7 @@
       "property": "fork",
       "upstream": "sgl-project/sglang",
       "ahead": 12,
-      "behind": 6654,
+      "behind": 6655,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -420,7 +450,7 @@
       "property": "fork",
       "upstream": "NVIDIA/TensorRT-LLM",
       "ahead": 1,
-      "behind": 2993,
+      "behind": 2994,
       "language": "Python/C++",
       "priority": "P2",
       "categories": [
