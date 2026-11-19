@@ -14,7 +14,7 @@
 审计日期与总量以下方徽章为准（由 `scripts/audit.py` 刷新，方法见 [methodology.md](methodology.md)）。
 
 <!-- AUTO:start badges -->
-![审计日期](https://img.shields.io/badge/审计-2026--11--18-4c9) ![仓库总数](https://img.shields.io/badge/仓库-147-4c9) ![公开](https://img.shields.io/badge/公开-90-blue) ![Fork](https://img.shields.io/badge/Fork-31-orange) ![竞赛](https://img.shields.io/badge/竞赛-3-blue) ![赛题](https://img.shields.io/badge/赛题-15-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
+![审计日期](https://img.shields.io/badge/审计-2026--11--19-4c9) ![仓库总数](https://img.shields.io/badge/仓库-148-4c9) ![公开](https://img.shields.io/badge/公开-90-blue) ![Fork](https://img.shields.io/badge/Fork-31-orange) ![竞赛](https://img.shields.io/badge/竞赛-3-blue) ![赛题](https://img.shields.io/badge/赛题-15-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
 <!-- AUTO:end badges -->
 
 ## 🧭 架构
@@ -87,7 +87,7 @@
 |------|---------|------|------|------|
 | holtwood（个人身份 / 索引 / 私有实验） | 29 | 11 | 18 | 0 |
 | holtwood-systems（AI Infra / HPC 系统） | 12 | 9 | 3 | 0 |
-| holtwood-arena（比赛与 benchmark） | 37 | 6 | 31 | 0 |
+| holtwood-arena（比赛与 benchmark） | 38 | 6 | 32 | 0 |
 | holtwood-forks（上游研读） | 32 | 32 | 0 | 31 |
 | holtwood-projects（历史应用与工具 · 维护模式） | 24 | 23 | 1 | 0 |
 | open-genomics（生信旧主线 · 维护模式） | 13 | 9 | 4 | 0 |

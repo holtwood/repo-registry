@@ -138,3 +138,8 @@
   需要人工判断保留哪一侧。
 - 默认分支：**新建仓库用 `main`**；存量 32 个 `master` 不做批量改名（改名会打断 clone、badge 与 CI 引用，
   收益为零），fork 一律跟随上游分支名。
+- **账号目录下只允许放 git 仓库**。非仓库材料统一进 `~/github/_inbox/<主题>/`，处理完再归档或删除；
+  空占位目录不留（要有东西才建目录）。
+- 例外：`holtwood-arena/groups/` 是 `arena.py link` 生成的软链接视图，属于工具产物，保留。
+- 未版本控制的工作区属于**风险项**：2026-11 发现 `holtwood-arena/amd`（AMD AI League，160 MB、
+  34 个源文件）从未 `git init`，已建为私有仓 `amd-2026-ai-league`。新工作区应第一天就建仓。
