@@ -5,6 +5,7 @@
 ## [2026-11-19]
 
 ### Changed
+- 治理：移除公开文档中的私有赛事仓名称，并将 `groups/` 说明收口为三棵语义树。
 - 治理：刷新私有学习项目迁移后的账号统计与审计数据
 - 仓库由 `holtwood/repos-db` 更名为 `holtwood/repo-registry`，私有对照页同步为 `repo-registry-private`；
   Star 索引由 `holtwood/stars-db` 更名为 `holtwood/stars-index`。

@@ -135,13 +135,14 @@ Pages 影响已处理：GitHub 只对仓库链接做 301，**project site URL �
 - 允许在某个仓库内部放**嵌套工作副本**（例如 `muse-spark-open-kernel-challenge/serving/sglang`），
   但它的 `origin` 必须指向真实仓库；这类副本不计入镜像清单。
 - 日常同步：先 `git fetch --prune`，再看 `HEAD..@{u}`；只允许 `--ff-only`，不做隐式合并。
-- 出现 `ahead > 0` 且远端已重写历史（例：`flagos-s2-track1` 本地 ahead 91 / behind 141）时**不自动处理**，
-  需要人工判断保留哪一侧。
+- 出现 `ahead > 0` 且远端已重写历史时**不自动合并**：先比较双方独有提交，必要时把旧本地主线打成
+  `archive/...` tag，再删除 backup 分支；不保留两套长期分叉的主线。
 - 默认分支：**新建仓库用 `main`**；存量 32 个 `master` 不做批量改名（改名会打断 clone、badge 与 CI 引用，
   收益为零），fork 一律跟随上游分支名。
 - **账号目录下只允许放 git 仓库**。非仓库材料统一进 `~/github/_inbox/<主题>/`，处理完再归档或删除；
   空占位目录不留（要有东西才建目录）。
-- 例外：`holtwood-arena/groups/` 是 `arena.py link` 生成的软链接视图，属于工具产物，保留。
+- 例外：`holtwood-arena/groups/` 是 `arena.py link` 生成的软链接视图，属于工具产物，保留；
+  只生成 `cannjudge/`、`events/`、`organization/` 三棵语义树，旧的平铺别名已移除。
 - 例外：`holtwood-arena/flagos/` 是 FlagOS 系列的内部分组容器，具体仓库与路径由
   `arena-index/arena.yaml` 的 `local_dir` 定义；账号目录下不再平铺 `flagos-s2-*`。
 - 未版本控制的工作区属于**风险项**：2026-11 发现 `holtwood-arena/amd`（AMD AI League，160 MB、
