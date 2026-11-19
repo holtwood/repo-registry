@@ -9,7 +9,7 @@
 <!-- AUTO:start forks-and-translations -->
 | Fork | 上游 | ahead/behind | 主语言 | AI Infra 优先级 | 学习价值与建议阅读范围 |
 |---|---|---|---|---|---|
-| [JadeAI](https://github.com/holtwood-forks/JadeAI) | [LingyiChen-AI/JadeAI](https://github.com/LingyiChen-AI/JadeAI) | 164/2 | TypeScript | 无 | AI 简历/求职工作台 fork；上游 LingyiChen-AI/JadeAI |
+| [JadeAI](https://github.com/holtwood-forks/JadeAI) | [LingyiChen-AI/JadeAI](https://github.com/LingyiChen-AI/JadeAI) | 166/2 | TypeScript | 无 | AI 简历/求职工作台 fork；上游 LingyiChen-AI/JadeAI |
 | [cuda-samples](https://github.com/holtwood-forks/cuda-samples) | [NVIDIA/cuda-samples](https://github.com/NVIDIA/cuda-samples) | 26/2 | C++ | P1 | CUDA 特性官方示例；只跑 0_Introduction、2_Concepts_and_Techniques、矩阵乘法相关样例 |
 | [SGEMM_CUDA](https://github.com/holtwood-forks/SGEMM_CUDA) | [siboehm/SGEMM_CUDA](https://github.com/siboehm/SGEMM_CUDA) | 2/0 | CUDA | P1 | SGEMM 优化阶梯（naive→WMMA）经典教程，已中文化 |
 | [cuda-course](https://github.com/holtwood-forks/cuda-course) | [Infatoshi/cuda-course](https://github.com/Infatoshi/cuda-course) | 2/0 | CUDA | P1 | CUDA 入门课程，与 cuda-samples 互补，选其一 |
@@ -19,11 +19,11 @@
 | [mini-sglang](https://github.com/holtwood-forks/mini-sglang) | [sgl-project/mini-sglang](https://github.com/sgl-project/mini-sglang) | 6/0 | Python | P1 | 紧凑版 SGLang，理解 serving 主循环 |
 | [flash-attention](https://github.com/holtwood-forks/flash-attention) | [Dao-AILab/flash-attention](https://github.com/Dao-AILab/flash-attention) | 2/110 | Python/CUDA | P2 | 只读 core 目录 FlashAttention 前向实现 |
 | [flashinfer](https://github.com/holtwood-forks/flashinfer) | [flashinfer-ai/flashinfer](https://github.com/flashinfer-ai/flashinfer) | 8/3427 | Python/CUDA | P2 | Kernel 库，对照 triton-fused-ops 的 API 设计 |
-| [vllm](https://github.com/holtwood-forks/vllm) | [vllm-project/vllm](https://github.com/vllm-project/vllm) | 14/6137 | Python | P2 | 只读 core scheduler、block manager、worker 主链路 |
-| [sglang](https://github.com/holtwood-forks/sglang) | [sgl-project/sglang](https://github.com/sgl-project/sglang) | 12/6638 | Python | P2 | 只读 scheduler 与 router |
-| [TensorRT-LLM](https://github.com/holtwood-forks/TensorRT-LLM) | [NVIDIA/TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM) | 1/2986 | Python/C++ | P2 | 只读 attention/quantization 文档与 benchmark 目录 |
+| [vllm](https://github.com/holtwood-forks/vllm) | [vllm-project/vllm](https://github.com/vllm-project/vllm) | 14/6157 | Python | P2 | 只读 core scheduler、block manager、worker 主链路 |
+| [sglang](https://github.com/holtwood-forks/sglang) | [sgl-project/sglang](https://github.com/sgl-project/sglang) | 12/6654 | Python | P2 | 只读 scheduler 与 router |
+| [TensorRT-LLM](https://github.com/holtwood-forks/TensorRT-LLM) | [NVIDIA/TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM) | 1/2993 | Python/C++ | P2 | 只读 attention/quantization 文档与 benchmark 目录 |
 | [triton](https://github.com/holtwood-forks/triton) | [triton-lang/triton](https://github.com/triton-lang/triton) | 0/785 | MLIR | P2 | 只读 python/triton 语言前端与 tutorial |
-| [tvm](https://github.com/holtwood-forks/tvm) | [apache/tvm](https://github.com/apache/tvm) | 1/449 | Python | P3 | 仅投 ML Compiler 岗时读 tensor expression 与 TE 调度 |
+| [tvm](https://github.com/holtwood-forks/tvm) | [apache/tvm](https://github.com/apache/tvm) | 1/451 | Python | P3 | 仅投 ML Compiler 岗时读 tensor expression 与 TE 调度 |
 | [LightLLM](https://github.com/holtwood-forks/LightLLM) | [ModelTC/LightLLM](https://github.com/ModelTC/LightLLM) | 12/153 | Python | P2 | 轻量推理框架，triton kernel 实现可对照 |
 | [lectures](https://github.com/holtwood-forks/lectures) | [gpu-mode/lectures](https://github.com/gpu-mode/lectures) | 3/1 | Notebook | P1 | GPU MODE 讲座材料，性能分析专题 |
 | [dataflowr-notebooks](https://github.com/holtwood-forks/dataflowr-notebooks) | [dataflowr/notebooks](https://github.com/dataflowr/notebooks) | 16/0 | Notebook | P3 | 深度学习课程笔记，按需查阅 |

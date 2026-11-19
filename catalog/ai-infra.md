@@ -12,7 +12,7 @@
 | Kernel | [cuda-foundations](https://github.com/holtwood-systems/cuda-foundations) + [cuflash](https://github.com/holtwood-systems/cuflash) + [trifuse](https://github.com/holtwood-systems/trifuse) | CUDA/Triton/FlashAttention、差分测试、benchmark、性能分析 |
 | KV 分层研究 | [kvtier](https://github.com/holtwood-systems/kvtier) | SGLang HiCache L2 微基准、结果包审计、上游贡献边界 |
 | C++ 工程辅助 | [cpp-high-performance-guide](https://github.com/holtwood-systems/cpp-high-performance-guide)、[fq-compressor](https://github.com/holtwood-genomics/fq-compressor) | C++20/23、SIMD、并发流水线、CI/Sanitizer |
-| 公开性能信号 | [race](https://github.com/holtwood-arena/race)、[kunpeng-s2-conv](https://github.com/holtwood-arena/kunpeng-s2-conv) | 单变量实验、硬件绑定、可复现基线 |
+| 公开性能信号 | [perf-race-lab](https://github.com/holtwood-arena/perf-race-lab)、[kunpeng-s2-conv](https://github.com/holtwood-arena/kunpeng-s2-conv) | 单变量实验、硬件绑定、可复现基线 |
 
 ## P1 — 选择性动手学习（Fork，只读相关模块）
 

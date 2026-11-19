@@ -40,7 +40,7 @@ FIXTURE = {
          "property": "original", "language": "Markdown", "resume_level": "中",
          "categories": ["holtwood-owned"],
          "notes": {"holtwood-owned": "12 周 AI Infra 转行计划"}},
-        {"name": "repos-db", "account": "holtwood", "visibility": "public",
+        {"name": "repo-registry", "account": "holtwood", "visibility": "public",
          "property": "original", "language": "Markdown", "resume_level": "低",
          "categories": ["holtwood-owned"],
          "notes": {"holtwood-owned": "本仓库"}},
@@ -124,7 +124,7 @@ REPO_BY_NAME = {r["name"]: r for r in FIXTURE["repos"]}
 # T-A. is_featured 门槛：original 需 resume 高/中；org-project 需 P0 且 contributors 缺失或含 holtwood；fork 排除
 expect_featured = {
     "study-plan": True,   # original resume 中
-    "repos-db": False,             # original resume 低
+    "repo-registry": False,             # original resume 低
     "tiny-llm": True,                  # org P0 contributors=holtwood
     "minibwa-rust": False,             # holtwood-genomics 旧主线不进精选
     "fq-compressor": False,            # holtwood-genomics 旧主线不进精选

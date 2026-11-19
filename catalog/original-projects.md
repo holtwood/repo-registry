@@ -22,7 +22,7 @@
 | [tiny-llm](https://github.com/holtwood-systems/tiny-llm) | holtwood-systems | CUDA 原生 C++ 推理引擎：GGUF 加载、W8A16 量化、分页 KV；性能数字以仓库当前报告为准 | 推理系统主项目 |
 | [paged-serving](https://github.com/holtwood-systems/paged-serving) | holtwood-systems | PagedAttention 分页 KV + Continuous Batching 控制面（Rust）；3 并发 e2e 与 llama.cpp greedy 对齐（诚实记录量化差异） | 与 tiny-llm 组成推理系统主项目 |
 | [kvtier](https://github.com/holtwood-systems/kvtier) | holtwood-systems | KV Cache 分层研究：单卡 L2 微基准与上游 HiCache 贡献 | 系统研究项目 |
-| [race](https://github.com/holtwood-arena/race) | holtwood-arena | 性能工程竞赛实验室：Speed Demon / 1BRC / PPC / DIMACS / AHC；数字绑定硬件与证据 | 性能工程公开信号 |
+| [perf-race-lab](https://github.com/holtwood-arena/perf-race-lab) | holtwood-arena | 性能工程竞赛实验室：Speed Demon / 1BRC / PPC / DIMACS / AHC；数字绑定硬件与证据 | 性能工程公开信号 |
 | [kunpeng-s2-conv](https://github.com/holtwood-arena/kunpeng-s2-conv) | holtwood-arena | Kunpeng S2 FP32 2D convolution 优化：x86 本地 ×17–21.6；鲲鹏平台未复测 | HPC 辅助 |
 | [kunpeng-s3-openfoam](https://github.com/holtwood-arena/kunpeng-s3-openfoam) | holtwood-arena | OpenFOAM v2606 simpleFoam 静态研究；未参赛、未上机，已归档 | HPC 调研样本 |
 | [gpumode-vectorsum](https://github.com/holtwood-arena/gpumode-vectorsum) | holtwood-arena | GPU MODE PMP_v2 vectorsum_v2：A100 141.865 μs，榜单 43/120；Triton 两阶段归约 | 中（有公开榜单与硬件绑定的性能数字） |

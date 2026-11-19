@@ -255,7 +255,7 @@ def render_badges(data, contests):
 
 
 # --- 精选区（README 顶部"主要开发项目"） ---
-FEATURED_EXCLUDE = {"repos-db", ".github", "holtwood"}
+FEATURED_EXCLUDE = {"repo-registry", ".github", "holtwood"}
 FEATURED_LIMIT = 10
 RESUME_ORDER = {"高": 0, "中": 1, "低": 2, "": 3}
 AI_ORDER = {"高": 0, "中": 1, "低": 2, "无": 3, "": 4}

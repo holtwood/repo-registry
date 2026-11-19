@@ -30,7 +30,7 @@
 | open-infra-ai/cpp-high-performance-guide | holtwood-systems/cpp-high-performance-guide | 组织改名 |
 | open-infra-ai/ai-infra-radar | holtwood/ai-infra-radar | 转回个人号 |
 | holtwood/ai-infra-serving | holtwood/ai-infra-serving-study-plan | 仓库改名 |
-| holtwood/race | holtwood-arena/race | 迁入比赛组织 |
+| holtwood/race | holtwood-arena/perf-race-lab | 迁入比赛组织 |
 | holtwood/kunpeng-s2-conv | holtwood-arena/kunpeng-s2-conv | 迁入比赛组织 |
 | holtwood/kunpeng-s3-openfoam | holtwood-arena/kunpeng-s3-openfoam | 迁入比赛组织 |
 | holtwood-projects/JadeAI | holtwood-forks/JadeAI | 归位为上游 fork |

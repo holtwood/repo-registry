@@ -15,7 +15,7 @@
 | [compress-kit](https://github.com/holtwood-projects/compress-kit) | 跨语言压缩算法与二进制级验证 | 低优先级 |
 | [cudaimg](https://github.com/holtwood-projects/cudaimg) | CUDA 图像处理 | 可作 CUDA 广度证据 |
 | [kvtier](https://github.com/holtwood-systems/kvtier) | memory hierarchy / KV tiering / 结果包审计 | P1 |
-| [race](https://github.com/holtwood-arena/race) | 性能工程方法论、单变量实验与证据记录 | P0 公开信号 |
+| [perf-race-lab](https://github.com/holtwood-arena/perf-race-lab) | 性能工程方法论、单变量实验与证据记录 | P0 公开信号 |
 | [kunpeng-s2-conv](https://github.com/holtwood-arena/kunpeng-s2-conv) | SIMD、访存分块、单变量归因 | P1 辅助 |
 | [kunpeng-s3-openfoam](https://github.com/holtwood-arena/kunpeng-s3-openfoam) | 应用级 HPC 调研、可修改范围与 A/B 协议 | P2 |
 | [cloud-bench](https://github.com/holtwood-projects/cloud-bench) | 云服务器 p99 长尾、%steal 超售检测、指令集检查 | 辅助 |

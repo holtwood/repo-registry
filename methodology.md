@@ -44,8 +44,8 @@
 
 | 仓库 | Secret | 失效表现 |
 |---|---|---|
-| `holtwood/repos-db` | `AUDIT_TOKEN` | `Run audit` 步骤报 `Bad credentials (HTTP 401)`，数据不再刷新 |
-| `holtwood/stars-db` | `STARS_TOKEN` | `Fetch stars` 步骤报 `Bad credentials (HTTP 401)` |
+| `holtwood/repo-registry` | `AUDIT_TOKEN` | `Run audit` 步骤报 `Bad credentials (HTTP 401)`，数据不再刷新 |
+| `holtwood/stars-index` | `STARS_TOKEN` | `Fetch stars` 步骤报 `Bad credentials (HTTP 401)` |
 
 **PAT 会过期，而过期不会有人通知你——索引只会静默变旧。** 因此：
 

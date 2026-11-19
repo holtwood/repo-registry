@@ -2,6 +2,15 @@
 
 本文件遵循 [Keep a Changelog](https://keepachangelog.com/) 格式。
 
+## [2026-11-19]
+
+### Changed
+- 仓库由 `holtwood/repos-db` 更名为 `holtwood/repo-registry`，私有对照页同步为 `repo-registry-private`；
+  Star 索引由 `holtwood/stars-db` 更名为 `holtwood/stars-index`。
+- `ARCHITECTURE.md §6` 命名规则改为 `-registry` / `-index` 两类，并记录 Pages 断链处理方式：
+  旧仓名保留为跳转仓，旧 project site URL 指向新站点。
+- `README`、`index.html`、`methodology.md`、catalog、生成脚本与 `data/repos.json` 中的旧名已同步。
+
 ## [2026-11-06]
 
 ### Changed

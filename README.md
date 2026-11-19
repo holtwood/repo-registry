@@ -1,4 +1,4 @@
-# 🗺️ GitHub Repos Hub — holtwood 项目导航
+# 🗺️ GitHub Repo Registry — holtwood 项目导航
 
 > **本仓库是所有索引层中的唯一权威地图。** 账号职责、仓库归属、竞赛台账与迁移记录以这里为准；
 > 其余索引页（[portfolio](https://github.com/holtwood-systems/portfolio)、
@@ -7,8 +7,9 @@
 > 都是按层切分的**视图**，与本文冲突时以本文为准。
 > 面向访客的精选入口是 **[imshane.site/projects](https://imshane.site/projects)**。
 
-> 仓库名中的 `db` 指「结构化数据（`data/repos.json`）+ 生成视图」，不是数据库服务；
-> 同一命名族的索引还有 `stars-db`、`repos-db-private`。为什么保留这个名字见
+> `repo-registry` 是「结构化数据（`data/repos.json`）+ 生成视图」的仓库登记层，不是数据库服务；
+> 同族的 `stars-index` 负责 Star 收藏索引，`repo-registry-private` 负责私有台账。
+> 2026-11-19 由 `repos-db` / `stars-db` 更名，旧 Pages 地址保留跳转页；决策见
 > [ARCHITECTURE.md §6](ARCHITECTURE.md)。
 
 审计日期与总量以下方徽章为准（由 `scripts/audit.py` 刷新，方法见 [methodology.md](methodology.md)）。
@@ -41,12 +42,12 @@
 | [portfolio](https://github.com/holtwood-systems/portfolio) | Markdown | holtwood-systems | holtwood-systems 的系统作品集入口：CUDA/Triton、推理运行时、Serving 与证据导航 |
 | [tiny-llm](https://github.com/holtwood-systems/tiny-llm) | C++ | holtwood-systems | CUDA 原生 C++ 推理引擎：GGUF 加载、W8A16 量化、分页 KV；性能数字以仓库当前报告为准 |
 | [trifuse](https://github.com/holtwood-systems/trifuse) | Python | holtwood-systems | Triton 算子库（RMSNorm+RoPE/SwiGLU/FlashAttention/SGEMM）+ torch.library 注册 |
-| [race](https://github.com/holtwood-arena/race) | Python | holtwood-arena | 性能工程竞赛实验室：Speed Demon / 1BRC / PPC / DIMACS / AHC；数字绑定硬件与证据 |
+| [perf-race-lab](https://github.com/holtwood-arena/perf-race-lab) | Python | holtwood-arena | 性能工程竞赛实验室：Speed Demon / 1BRC / PPC / DIMACS / AHC；数字绑定硬件与证据 |
 | [ai-infra-serving-study-plan](https://github.com/holtwood/ai-infra-serving-study-plan) | Markdown | holtwood | AI Infra（LLM serving）学习计划：kernel、vLLM/SGLang 内部与 mini serving engine |
 | [cpp-high-performance-guide](https://github.com/holtwood-systems/cpp-high-performance-guide) | C++ | holtwood-systems | 可运行的 C++20 性能工程指南：示例、基准、VitePress 文档站 |
 <!-- AUTO:end featured -->
 
-> 按主题索引见下方各分类与[文档站](https://holtwood.github.io/repos-db/)。
+> 按主题索引见下方各分类与[文档站](https://holtwood.github.io/repo-registry/)。
 
 ## 🏁 竞赛与赛题
 
@@ -66,7 +67,7 @@
 
 ## 📖 文档站与主题索引
 
-可搜索文档站（GitHub Pages）：**https://holtwood.github.io/repos-db/**。
+可搜索文档站（GitHub Pages）：**https://holtwood.github.io/repo-registry/**。
 
 - [竞赛与赛题](catalog/competitions.md)（公开信息）
 - [holtwood 个人原创与索引](catalog/holtwood-owned.md)
@@ -131,10 +132,10 @@ CHANGELOG.md
 
 | 仓库 | 职责 |
 |------|------|
-| repos-db（本仓库） | 仓库盘点、分类、导航、迁移记录、deep-dives |
+| repo-registry（本仓库） | 仓库盘点、分类、导航、迁移记录、deep-dives |
 | [holtwood/holtwood](https://github.com/holtwood/holtwood) | 个人主页与对外入口 |
 | [holtwood-systems/portfolio](https://github.com/holtwood-systems/portfolio) | 系统作品集、跨仓契约与证据索引 |
 | [holtwood/ai-infra-serving-study-plan](https://github.com/holtwood/ai-infra-serving-study-plan) | 公开的 AI Infra / LLM Serving 学习计划 |
 | [holtwood-arena/.github](https://github.com/holtwood-arena/.github) | 比赛与 benchmark 的公开入口 |
 | [holtwood-forks/.github](https://github.com/holtwood-forks/.github) | 上游研读范围与边界说明 |
-| [stars-db](https://github.com/holtwood/stars-db) | Star 资源分类索引（不复制其内容） |
+| [stars-index](https://github.com/holtwood/stars-index) | Star 资源分类索引（不复制其内容） |

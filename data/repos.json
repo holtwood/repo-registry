@@ -40,7 +40,7 @@
   },
   "repos": [
     {
-      "name": "repos-db",
+      "name": "repo-registry",
       "account": "holtwood",
       "visibility": "public",
       "property": "original",
@@ -57,7 +57,7 @@
       "links_ok": true
     },
     {
-      "name": "stars-db",
+      "name": "stars-index",
       "account": "holtwood",
       "visibility": "public",
       "property": "original",
@@ -212,7 +212,7 @@
       "links_ok": true,
       "upstream": "LingyiChen-AI/JadeAI",
       "priority": "无",
-      "ahead": 164,
+      "ahead": 166,
       "behind": 2
     },
     {
@@ -384,7 +384,7 @@
       "property": "fork",
       "upstream": "vllm-project/vllm",
       "ahead": 14,
-      "behind": 6137,
+      "behind": 6157,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -402,7 +402,7 @@
       "property": "fork",
       "upstream": "sgl-project/sglang",
       "ahead": 12,
-      "behind": 6638,
+      "behind": 6654,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -420,7 +420,7 @@
       "property": "fork",
       "upstream": "NVIDIA/TensorRT-LLM",
       "ahead": 1,
-      "behind": 2986,
+      "behind": 2993,
       "language": "Python/C++",
       "priority": "P2",
       "categories": [
@@ -456,7 +456,7 @@
       "property": "fork",
       "upstream": "apache/tvm",
       "ahead": 1,
-      "behind": 449,
+      "behind": 451,
       "language": "Python",
       "priority": "P3",
       "categories": [
@@ -1267,7 +1267,7 @@
       "links_ok": true
     },
     {
-      "name": "race",
+      "name": "perf-race-lab",
       "account": "holtwood-arena",
       "visibility": "public",
       "property": "org-project",
@@ -1396,7 +1396,7 @@
     {
       "old": "holtwood/race",
       "status": "transferred",
-      "note": "→ holtwood-arena/race"
+      "note": "→ holtwood-arena/perf-race-lab"
     },
     {
       "old": "holtwood/kunpeng-*",

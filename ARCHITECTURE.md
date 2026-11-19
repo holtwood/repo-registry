@@ -67,7 +67,8 @@
 
 | 后缀 | 用在 | 现存例子 |
 |---|---|---|
-| `-db` | 结构化数据 + 生成视图的索引层 | `repos-db` `stars-db` `repos-db-private` |
+| `-index` | 结构化数据 + 生成视图的索引层 | `stars-index` `arena-index` |
+| `-registry` | 权威登记 / 治理台账 | `repo-registry` `repo-registry-private` |
 | `-guide` / `-foundations` | 教学与学习主线 | `cpp-high-performance-guide` `cuda-foundations` |
 | `-plan` / `-prep` / `-kit` | 计划、求职资料、工具集 | `ai-infra-serving-study-plan` `career-prep` `agent-skills-kit` |
 | `-lab` | 实验体系 | `ascend-llm-infra-lab` |
@@ -79,28 +80,25 @@
 - 竞赛仓库：`<赛事>-<年份>-<赛道>-<序号>-<题目slug>`，例 `cann-2026-power-04-det`。
 - Fork 沿用上游名，不改（`vllm`、`Triton-Puzzles`、`Termius-Pro-zh_CN`）。
 - 反面清单：不要把语言写进名字（`xxx-cpp`）；不要造无信息量的泛名（`my-project`、`tools`）；不要在一个功能域里混三种命名风格。
-- 已存在的历史命名不为了整齐而批量重命名；只在下次自然触碰该仓库时按本规则改。
+- 默认不为整齐而批量重命名；确需改名时必须同时处理 Pages 断链（同名跳转仓或自定义域名）并更新全部索引。
 
-### 为什么 `repos-db` / `stars-db` 不改名
+### 2026-11-19 改名决策：`repos-db` → `repo-registry`，`stars-db` → `stars-index`
 
-`-db` 后缀在本账号里表示「**结构化数据 + 生成视图**的索引层」：`data/*.json` 是事实源，
-`scripts/generate.py` 渲染成页面，Pages 提供站点。它和作品集仓库是两个物种，名字要能区分。
+`-db` 容易被读成数据库服务，实际两者都是「JSON 事实源 + 生成视图」。本次按显式决策更名：
 
-评估过改成 `repo-map` / `star-map` 一类，结论是**不改**，理由是可验证的：
+- `repo-registry`：权威仓库登记与治理台账；私有对照为 `repo-registry-private`。
+- `stars-index`：GitHub Star 收藏索引。
 
-- GitHub 官方文档（Renaming a repository）：改名时"除 **project site URLs** 外"全部自动重定向。
-  也就是说 `holtwood.github.io/repos-db/` 与 `/stars-db/` 会直接 404，唯一解法是绑自定义域名。
-- 两者互相引用，并被 `holtwood`、`holtwood-systems/portfolio`、`holtwood-arena/*`、
-  `holtwood-projects.github.io` 共 40+ 处引用。改名收益是审美，成本是断链加书签失效。
-
-**将来若真要改**：先给两个站点绑自定义域名（例如 `map.imshane.site`），URL 与仓库名解耦后再改名；
-或改名后用同名仓库放跳转页。在此之前保持原名，不要每次评审重新讨论一遍。
+Pages 影响已处理：GitHub 只对仓库链接做 301，**project site URL 不会重定向**。因此旧仓名
+`holtwood/repos-db`、`holtwood/stars-db` 保留为极小跳转仓，把
+`holtwood.github.io/repos-db/`、`/stars-db/` 指向新站点；新地址为
+`holtwood.github.io/repo-registry/`、`/stars-index/`。跳转仓不含业务数据，索引与数据只在新仓维护。
 
 ## 7. 可见性与索引
 
 - 私有仓库的名称与描述不进入公开文档，只进入公开统计数字。
-- 索引层只有 `repos-db`（公开）与 `repos-db-private`（私有）维护仓库清单；其余页面是视图，冲突时以 `repos-db` 为准。
-- `holtwood-arena` 的私有赛事仓库以 `arena-index/arena.yaml` 为**唯一事实源**；`repos-db-private`
+- 索引层只有 `repo-registry`（公开）与 `repo-registry-private`（私有）维护仓库清单；其余页面是视图，冲突时以 `repo-registry` 为准。
+- `holtwood-arena` 的私有赛事仓库以 `arena-index/arena.yaml` 为**唯一事实源**；`repo-registry-private`
   只统计该账号的私有数量，不重复登记赛事仓。两处都出现时以 `arena.yaml` 为准。
 - 公开文档中出现性能数字时，必须绑定硬件、提交与测量方式；无复现路径的数字标注为"未独立复现"。
 - **有 Pages 站点的仓库必须填 homepage**，且指向当前组织名下的 URL。组织改名不会重定向项目站点，
@@ -113,8 +111,8 @@
 
 | 仓库 | Secret | 用途 | 失效表现 |
 |---|---|---|---|
-| `holtwood/repos-db` | `AUDIT_TOKEN` | 跨 6 个账号拉取仓库清单与 ahead/behind | 审计步骤报 `Bad credentials (HTTP 401)` |
-| `holtwood/stars-db` | `STARS_TOKEN` | 读取 Star 与 Star Lists | `Fetch stars` 步骤报 `Bad credentials (HTTP 401)` |
+| `holtwood/repo-registry` | `AUDIT_TOKEN` | 跨 6 个账号拉取仓库清单与 ahead/behind | 审计步骤报 `Bad credentials (HTTP 401)` |
+| `holtwood/stars-index` | `STARS_TOKEN` | 读取 Star 与 Star Lists | `Fetch stars` 步骤报 `Bad credentials (HTTP 401)` |
 
 **PAT 会过期，过期后索引静默变旧。** 轮换后须手动触发一次 workflow，确认徽章日期前进。
 
@@ -122,12 +120,12 @@
 
 以下两项需要人工在网页端操作，脚本或 API 无法代为完成：
 
-1. **`holtwood/repos-db` 的 `AUDIT_TOKEN` 与 `holtwood/stars-db` 的 `STARS_TOKEN` 未轮换**。两个 workflow 自 2026-11-09 起持续报 `Bad credentials (HTTP 401)`；索引目前靠本地手动审计维持（见 §8）。
+1. **`holtwood/repo-registry` 的 `AUDIT_TOKEN` 与 `holtwood/stars-index` 的 `STARS_TOKEN` 未轮换**。两个 workflow 自 2026-11-09 起持续报 `Bad credentials (HTTP 401)`；索引目前靠本地手动审计维持（见 §8）。
 2. **`electronic` 组织不可管理**。`GET /orgs/electronic/teams` 返回 403，说明当前账号不是其 admin，因此无法删除或改描述。它不属于本架构，保持现状即可。
 
 已完成：`open-genomics` → `holtwood-genomics` 组织改名（2026-11-19）。本地目录、13 个仓库的 `origin`、Pages 域名引用与索引数据均已同步；旧项目站点不重定向，因此文档中的 `*.github.io` 必须使用新域名。
 
-已收敛（勿重复讨论）：`repos-db` / `stars-db` 保留原名（§6）；`career-prep` 归个人号、`ai-infra-interview-prep` 归档；竞赛仓一律进 `holtwood-arena`。
+已收敛（勿重复讨论）：`repo-registry` / `stars-index` 保留原名（§6）；`career-prep` 归个人号、`ai-infra-interview-prep` 归档；竞赛仓一律进 `holtwood-arena`。
 
 ## 10. 本地工作区
 

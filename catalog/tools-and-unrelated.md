@@ -7,7 +7,7 @@
 <!-- AUTO:start tools-and-unrelated -->
 | 仓库 | 说明 |
 |---|---|
-| [stars-db](https://github.com/holtwood/stars-db) | 1300+ Star 项目分类索引（本 Hub 不复制其内容） |
+| [stars-index](https://github.com/holtwood/stars-index) | 1300+ Star 项目分类索引（本 Hub 不复制其内容） |
 | [awesome-cursorrules-zh](https://github.com/holtwood/awesome-cursorrules-zh) | Cursor 规则中文精选（AI 翻译/整理性质） |
 | [hugo-blog](https://github.com/holtwood/hugo-blog) | 个人博客 |
 | [Termius-Pro-zh_CN](https://github.com/holtwood-forks/Termius-Pro-zh_CN) | Termius 汉化 |

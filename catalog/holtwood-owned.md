@@ -6,8 +6,8 @@
 <!-- AUTO:start holtwood-owned -->
 | 仓库 | 语言 | 领域 | AI Infra 相关性 | 简历可用性 | 说明 |
 |---|---|---|---|---|---|
-| [repos-db](https://github.com/holtwood/repos-db) | Markdown | 仓库导航 | 中 | 低 | 本仓库：全部仓库盘点与 deep-dives |
-| [stars-db](https://github.com/holtwood/stars-db) | Python | 资源索引 | 低 | 低 | 1300+ Star 项目分类索引 |
+| [repo-registry](https://github.com/holtwood/repo-registry) | Markdown | 仓库导航 | 中 | 低 | 本仓库：全部仓库盘点与 deep-dives |
+| [stars-index](https://github.com/holtwood/stars-index) | Python | 资源索引 | 低 | 低 | 1300+ Star 项目分类索引 |
 | [awesome-cursorrules-zh](https://github.com/holtwood/awesome-cursorrules-zh) | JavaScript | 工具资源 | 无 | 低 | Cursor 规则中文精选（AI 翻译/整理性质） |
 | [hugo-blog](https://github.com/holtwood/hugo-blog) | CSS | 博客 | 无 | 低 | 个人博客站点 |
 | [holtwood](https://github.com/holtwood/holtwood) | Markdown | 个人主页 | 低 | 中 | Profile 展示页 |
