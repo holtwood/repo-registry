@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""GitHub Repos Hub 审计：gh api 拉取实时数据刷新 repos.json。
+"""GitHub Repo Registry 审计：gh api 拉取实时数据刷新 repos.json。
 
 只更新结构化且可靠的数据：
   audited_at / accounts.public / accounts.forks /

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""GitHub Repos Hub 生成器：repos.json -> catalog 表格 / README / _sidebar / CHANGELOG。
+"""GitHub Repo Registry 生成器：repos.json -> catalog 表格 / README / _sidebar / CHANGELOG。
 
 用法：
   python3 scripts/generate.py                        # 全量渲染（写文件）
