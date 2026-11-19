@@ -100,6 +100,8 @@
 
 - 私有仓库的名称与描述不进入公开文档，只进入公开统计数字。
 - 索引层只有 `repos-db`（公开）与 `repos-db-private`（私有）维护仓库清单；其余页面是视图，冲突时以 `repos-db` 为准。
+- `holtwood-arena` 的私有赛事仓库以 `arena-index/arena.yaml` 为**唯一事实源**；`repos-db-private`
+  只统计该账号的私有数量，不重复登记赛事仓。两处都出现时以 `arena.yaml` 为准。
 - 公开文档中出现性能数字时，必须绑定硬件、提交与测量方式；无复现路径的数字标注为"未独立复现"。
 - **有 Pages 站点的仓库必须填 homepage**，且指向当前组织名下的 URL。组织改名不会重定向项目站点，
   旧组织域名的链接会直接 404（2026-11 已修复 `open-infra-ai.github.io` 与 `open-genomics.github.io` 的历史死链）。
@@ -144,3 +146,5 @@
 - 例外：`holtwood-arena/groups/` 是 `arena.py link` 生成的软链接视图，属于工具产物，保留。
 - 未版本控制的工作区属于**风险项**：2026-11 发现 `holtwood-arena/amd`（AMD AI League，160 MB、
   34 个源文件）从未 `git init`，已建为私有仓 `amd-2026-ai-league`。新工作区应第一天就建仓。
+- **归档仓库仍需修文档时**（如组织改名导致的死链）：临时 `archived=false` → 推送 → 立即恢复
+  `archived=true`；若分支保护要求状态检查，则走分支 + PR，不直接改默认分支。

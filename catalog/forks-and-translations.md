@@ -19,10 +19,10 @@
 | [mini-sglang](https://github.com/holtwood-forks/mini-sglang) | [sgl-project/mini-sglang](https://github.com/sgl-project/mini-sglang) | 6/0 | Python | P1 | 紧凑版 SGLang，理解 serving 主循环 |
 | [flash-attention](https://github.com/holtwood-forks/flash-attention) | [Dao-AILab/flash-attention](https://github.com/Dao-AILab/flash-attention) | 2/110 | Python/CUDA | P2 | 只读 core 目录 FlashAttention 前向实现 |
 | [flashinfer](https://github.com/holtwood-forks/flashinfer) | [flashinfer-ai/flashinfer](https://github.com/flashinfer-ai/flashinfer) | 8/3427 | Python/CUDA | P2 | Kernel 库，对照 triton-fused-ops 的 API 设计 |
-| [vllm](https://github.com/holtwood-forks/vllm) | [vllm-project/vllm](https://github.com/vllm-project/vllm) | 14/6132 | Python | P2 | 只读 core scheduler、block manager、worker 主链路 |
-| [sglang](https://github.com/holtwood-forks/sglang) | [sgl-project/sglang](https://github.com/sgl-project/sglang) | 12/6637 | Python | P2 | 只读 scheduler 与 router |
-| [TensorRT-LLM](https://github.com/holtwood-forks/TensorRT-LLM) | [NVIDIA/TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM) | 1/2985 | Python/C++ | P2 | 只读 attention/quantization 文档与 benchmark 目录 |
-| [triton](https://github.com/holtwood-forks/triton) | [triton-lang/triton](https://github.com/triton-lang/triton) | 0/784 | MLIR | P2 | 只读 python/triton 语言前端与 tutorial |
+| [vllm](https://github.com/holtwood-forks/vllm) | [vllm-project/vllm](https://github.com/vllm-project/vllm) | 14/6137 | Python | P2 | 只读 core scheduler、block manager、worker 主链路 |
+| [sglang](https://github.com/holtwood-forks/sglang) | [sgl-project/sglang](https://github.com/sgl-project/sglang) | 12/6638 | Python | P2 | 只读 scheduler 与 router |
+| [TensorRT-LLM](https://github.com/holtwood-forks/TensorRT-LLM) | [NVIDIA/TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM) | 1/2986 | Python/C++ | P2 | 只读 attention/quantization 文档与 benchmark 目录 |
+| [triton](https://github.com/holtwood-forks/triton) | [triton-lang/triton](https://github.com/triton-lang/triton) | 0/785 | MLIR | P2 | 只读 python/triton 语言前端与 tutorial |
 | [tvm](https://github.com/holtwood-forks/tvm) | [apache/tvm](https://github.com/apache/tvm) | 1/449 | Python | P3 | 仅投 ML Compiler 岗时读 tensor expression 与 TE 调度 |
 | [LightLLM](https://github.com/holtwood-forks/LightLLM) | [ModelTC/LightLLM](https://github.com/ModelTC/LightLLM) | 12/153 | Python | P2 | 轻量推理框架，triton kernel 实现可对照 |
 | [lectures](https://github.com/holtwood-forks/lectures) | [gpu-mode/lectures](https://github.com/gpu-mode/lectures) | 3/1 | Notebook | P1 | GPU MODE 讲座材料，性能分析专题 |
@@ -35,7 +35,7 @@
 | [Clay](https://github.com/holtwood-forks/Clay) | [chaun-yi7/Clay](https://github.com/chaun-yi7/Clay) | 0/3 | CSS | 无 | Typora 主题（仿 Claude 配色）；自用 fork，与 AI Infra 无关 |
 | [lsix](https://github.com/holtwood/lsix) | - | 0/0 | Shell | 无 | 终端图片预览脚本；2025-07 DMCA 下架，API 返回 451，GitHub 不提供删除/转移入口，仅作记录 |
 | [DLX](https://github.com/holtwood-forks/DLX) | [OwO-Network/DLX](https://github.com/OwO-Network/DLX) | 0/15 | Go | 无 | 自建翻译 API 服务；自用 fork，与 AI Infra 无关 |
-| [axonhub](https://github.com/holtwood-forks/axonhub) | [looplj/axonhub](https://github.com/looplj/axonhub) | 0/267 | Go | 无 | 开源 AI Gateway（多模型统一接入）；自用 fork，与主线弱相关 |
+| [axonhub](https://github.com/holtwood-forks/axonhub) | [looplj/axonhub](https://github.com/looplj/axonhub) | 0/270 | Go | 无 | 开源 AI Gateway（多模型统一接入）；自用 fork，与主线弱相关 |
 | [fruit-ninja-dojo](https://github.com/holtwood-forks/fruit-ninja-dojo) | [yongqixue99-hue/fruit-ninja-dojo](https://github.com/yongqixue99-hue/fruit-ninja-dojo) | 0/0 | HTML | 无 | 原生 Canvas 水果忍者小游戏；自用 fork |
 | [gpt6-astra-one-shot-games](https://github.com/holtwood-forks/gpt6-astra-one-shot-games) | [Ayi1337/gpt6-astra-one-shot-games](https://github.com/Ayi1337/gpt6-astra-one-shot-games) | 1/0 | HTML | 无 | GPT-6 Astra One Shot 小游戏合集；自用 fork |
 | [massCode](https://github.com/holtwood-forks/massCode) | [massCodeIO/massCode](https://github.com/massCodeIO/massCode) | 0/84 | TypeScript | 无 | 开发者工作区（代码片段/笔记/HTTP 请求）；自用 fork |
