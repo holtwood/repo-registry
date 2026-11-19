@@ -36,11 +36,11 @@
 | holtwood-projects/JadeAI | holtwood-forks/JadeAI | 归位为上游 fork |
 | holtwood/cloud-bench | holtwood-projects/cloud-bench | 转入历史应用组织 |
 | holtwood/wb2api | holtwood-projects/wb2api | 转入历史应用组织 |
-| holtwood/fq-compressor | open-genomics/fq-compressor | 生信旧主线 |
-| holtwood/fastq-tools | open-genomics/fastq-tools | 生信旧主线 |
-| holtwood/micos-2024 | open-genomics/micos-2024 | 生信旧主线 |
-| holtwood/wiki-bioinfo | open-genomics/wiki-bioinfo | 生信旧主线 |
-| holtwood/awesome-bioinfo-algorithms | open-genomics/awesome-bioinfo-algorithms | 生信旧主线 |
+| holtwood/fq-compressor | holtwood-genomics/fq-compressor | 生信旧主线 |
+| holtwood/fastq-tools | holtwood-genomics/fastq-tools | 生信旧主线 |
+| holtwood/micos-2024 | holtwood-genomics/micos-2024 | 生信旧主线 |
+| holtwood/wiki-bioinfo | holtwood-genomics/wiki-bioinfo | 生信旧主线 |
+| holtwood/awesome-bioinfo-algorithms | holtwood-genomics/awesome-bioinfo-algorithms | 生信旧主线 |
 | holtwood/compress-kit | holtwood-projects/compress-kit | 工具项目 |
 | holtwood/bookmarks-cleaner | holtwood-projects/bookmarks-cleaner | 工具项目 |
 | holtwood/graph-viewer | holtwood-projects/graph-viewer | 工具项目 |

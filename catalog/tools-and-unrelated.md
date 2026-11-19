@@ -29,7 +29,7 @@ yolo-toys、utop、chatroom、webrtc-call、webrtc-signaling（实时系统与�
 > 非 Infra 项目）。`JadeAI` 是 fork，归在
 > [holtwood-forks](https://github.com/holtwood-forks/JadeAI)。
 
-## open-genomics 生物信息（维护模式）
+## holtwood-genomics 生物信息（维护模式）
 
 wiki-bioinfo、awesome-bioinfo-algorithms、micos-2024、fq-compressor-rust
 （历史项目与知识库，保留链接，不进入当前主线）。

@@ -102,7 +102,7 @@
 - 索引层只有 `repos-db`（公开）与 `repos-db-private`（私有）维护仓库清单；其余页面是视图，冲突时以 `repos-db` 为准。
 - 公开文档中出现性能数字时，必须绑定硬件、提交与测量方式；无复现路径的数字标注为"未独立复现"。
 - **有 Pages 站点的仓库必须填 homepage**，且指向当前组织名下的 URL。组织改名不会重定向项目站点，
-  旧组织域名的链接会直接 404（2026-11 已修复 4 处 `open-infra-ai.github.io` 死链）。
+  旧组织域名的链接会直接 404（2026-11 已修复 `open-infra-ai.github.io` 与 `open-genomics.github.io` 的历史死链）。
 - 文档载体固定为 README / `docs/` / Pages；不启用 Wiki 与 Projects 作为文档源（保持默认或关闭即可）。
 
 ## 8. 运维要求
@@ -118,11 +118,12 @@
 
 ## 9. 未决事项
 
-以下三项都需要人工在网页端操作，脚本或 API 无法代为完成：
+以下两项需要人工在网页端操作，脚本或 API 无法代为完成：
 
-1. **`open-genomics` → `holtwood-genomics` 改名**。`PATCH /orgs/{org}` 会静默忽略 `login` 字段，GitHub 只允许在 Settings → Account → Change organization's account name 完成。改名后需同步 4 处 `open-genomics.github.io` 引用（`fq-compressor`、`micos-2024`）与本文件、`README.md`、`methodology.md`、`holtwood/holtwood` Profile。
-2. **`holtwood/repos-db` 的 `AUDIT_TOKEN` 与 `holtwood/stars-db` 的 `STARS_TOKEN` 未轮换**。两个 workflow 自 2026-11-09 起持续报 `Bad credentials (HTTP 401)`；索引目前靠本地手动审计维持（见 §8）。
-3. **`electronic` 组织不可管理**。`GET /orgs/electronic/teams` 返回 403，说明当前账号不是其 admin，因此无法删除或改描述。它不属于本架构，保持现状即可。
+1. **`holtwood/repos-db` 的 `AUDIT_TOKEN` 与 `holtwood/stars-db` 的 `STARS_TOKEN` 未轮换**。两个 workflow 自 2026-11-09 起持续报 `Bad credentials (HTTP 401)`；索引目前靠本地手动审计维持（见 §8）。
+2. **`electronic` 组织不可管理**。`GET /orgs/electronic/teams` 返回 403，说明当前账号不是其 admin，因此无法删除或改描述。它不属于本架构，保持现状即可。
+
+已完成：`open-genomics` → `holtwood-genomics` 组织改名（2026-11-19）。本地目录、13 个仓库的 `origin`、Pages 域名引用与索引数据均已同步；旧项目站点不重定向，因此文档中的 `*.github.io` 必须使用新域名。
 
 已收敛（勿重复讨论）：`repos-db` / `stars-db` 保留原名（§6）；`career-prep` 归个人号、`ai-infra-interview-prep` 归档；竞赛仓一律进 `holtwood-arena`。
 

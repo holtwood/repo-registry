@@ -31,7 +31,7 @@
 性能数字的硬件/版本/命令口径见各仓 README 与
 [portfolio](https://github.com/holtwood-systems/portfolio) 证据索引，此处不复制。
 
-## open-genomics — 旧主线（维护模式）
+## holtwood-genomics — 旧主线（维护模式）
 
 生物信息是过去的主线，不再是当前重点。贡献者审计：fq-compressor、fastq-tools 等
 contributors 仅 holtwood（micos-2024 另有 dependabot）。仓库保留可复现性与维护修复，
@@ -40,13 +40,13 @@ contributors 仅 holtwood（micos-2024 另有 dependabot）。仓库保留可复
 <!-- AUTO:start original-projects-genomics -->
 | 项目 | 定位 | 简历用法 |
 |---|---|---|
-| [fq-compressor](https://github.com/open-genomics/fq-compressor) | C++23 高性能 FASTQ 压缩：3.97x 压缩比、O(1) 随机访问、oneTBB 并发流水线、CI/Sanitizer | C++ 工程质量辅助项目 |
-| [fastq-tools](https://github.com/open-genomics/fastq-tools) | FASTQ 质控工具：零拷贝 I/O、TBB 流水线 | C++ 工程辅助 |
-| [minibwa-rust](https://github.com/open-genomics/minibwa-rust) | Rust 重写 BWA 序列比对核心 | 系统能力辅助 |
-| [fq-compressor-rust](https://github.com/open-genomics/fq-compressor-rust) | fq-compressor 的 Rust 版本 | 辅助 |
-| [micos-2024](https://github.com/open-genomics/micos-2024) | 宏基因组综合分析平台（猛犸杯 2024 参赛项目） | 历史项目 |
-| [wiki-bioinfo](https://github.com/open-genomics/wiki-bioinfo) | 中文生物信息知识库 | 社区贡献展示 |
-| [awesome-bioinfo-algorithms](https://github.com/open-genomics/awesome-bioinfo-algorithms) | 算法知识库 + CLI 维护工具 | 低优先级 |
+| [fq-compressor](https://github.com/holtwood-genomics/fq-compressor) | C++23 高性能 FASTQ 压缩：3.97x 压缩比、O(1) 随机访问、oneTBB 并发流水线、CI/Sanitizer | C++ 工程质量辅助项目 |
+| [fastq-tools](https://github.com/holtwood-genomics/fastq-tools) | FASTQ 质控工具：零拷贝 I/O、TBB 流水线 | C++ 工程辅助 |
+| [minibwa-rust](https://github.com/holtwood-genomics/minibwa-rust) | Rust 重写 BWA 序列比对核心 | 系统能力辅助 |
+| [fq-compressor-rust](https://github.com/holtwood-genomics/fq-compressor-rust) | fq-compressor 的 Rust 版本 | 辅助 |
+| [micos-2024](https://github.com/holtwood-genomics/micos-2024) | 宏基因组综合分析平台（猛犸杯 2024 参赛项目） | 历史项目 |
+| [wiki-bioinfo](https://github.com/holtwood-genomics/wiki-bioinfo) | 中文生物信息知识库 | 社区贡献展示 |
+| [awesome-bioinfo-algorithms](https://github.com/holtwood-genomics/awesome-bioinfo-algorithms) | 算法知识库 + CLI 维护工具 | 低优先级 |
 <!-- AUTO:end original-projects-genomics -->
 
 ## holtwood-projects — 历史应用与工具（维护模式）

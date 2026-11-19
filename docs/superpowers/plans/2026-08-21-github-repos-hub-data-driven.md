@@ -43,7 +43,7 @@
   "accounts": {
     "LessUp":        { "public": 31, "private": 1, "forks": 22, "note": "个人" },
     "open-infra-ai": { "public": 7,  "private": 0, "forks": 0,  "note": "AI Infra 作品集" },
-    "open-genomics": { "public": 7,  "private": 5, "forks": 0,  "note": "生物信息与 C++ 工程" },
+    "holtwood-genomics": { "public": 7,  "private": 5, "forks": 0,  "note": "生物信息与 C++ 工程" },
     "vibe-knight":   { "public": 14, "private": 1, "forks": 0,  "note": "实验性与工具" }
   },
   "repos": [],
@@ -56,7 +56,7 @@
 - `lessup-owned` 9 个（LessUp 原创公开）：`ai-infra-interview-prep`、`github-repos-hub`、`stars-index`、`cpp-high-performance-guide`、`bitcal`、`TensorTonic-Solutions`、`awesome-cursorrules-zh`、`hugo-blog`、`LessUp`。字段含 `language`/`domain`/`ai_relevance`(高/中/低/无)/`resume_level`(高/中/低)/`resume`(bool)/`notes.lessup-owned`。
 - `forks-and-translations` 22 个 fork：`property:"fork"`，含 `upstream`/`ahead`/`behind`/`language`/`priority`/`notes.forks-and-translations`。注意 `Termius-Pro-zh_CN` 的 `priority:"无"`，`tutorials`（Triton Inference Server）的 upstream 是 `triton-inference-server/tutorials`。
 - `organizations` 7 个（open-infra-ai）：`aicl-lab`、`cuda-foundations`、`triton-fused-ops`、`cuflash-attn`、`tiny-llm`、`paged-infer`、`.github`。字段含 `license`/`contributors`/`notes.organizations`（定位文字）。`.github` 的 language/license 为空字符串。
-- `original-projects` 的 open-infra-ai 6 个 + open-genomics 7 个：`notes["original-projects"]` 用**对象** `{"position": "...", "resume": "..."}` 承载"定位与证据"与"简历用法"两列。
+- `original-projects` 的 open-infra-ai 6 个 + holtwood-genomics 7 个：`notes["original-projects"]` 用**对象** `{"position": "...", "resume": "..."}` 承载"定位与证据"与"简历用法"两列。
 - 跨分类仓库：`fq-compressor`/`fastq-tools`/`minibwa-rust` 同时属 `original-projects` 与 `hpc-and-transferable`；`cpp-high-performance-guide`/`bitcal` 同时属 `lessup-owned` 与 `hpc-and-transferable`；`compress-kit`/`cudaimg` 属 `hpc-and-transferable`（及 vibe-knight 组，vibe-knight 组手工不落 categories）。每个分类的 `notes[slug]` 单独写。
 - `hpc-and-transferable` 的 `ompi`（Fork: ompi）与已删除的 `the-art-of-hpc-zh`：**不进入 repos[]**（ompi 已在 forks 分类有完整记录；the-art-of-hpc-zh 进 `retired`），该文件手工段落保留这些叙事行。
 - `retired[]` 4 条（旧地址 → 状态 → 处理）：`LessUp/sgemm-optimization`、`LessUp/the-art-of-hpc-zh`、`LessUp/cursor-rules`、`LessUp/awesome-claude-skills-zh`。
@@ -70,7 +70,7 @@ python3 -m json.tool data/repos.json > /dev/null && echo "VALID JSON"
 
 - [ ] **Step 3: 校验数量与字段完整性**
 
-用 python 脚本断言：LessUp 原创 = 9、fork = 22、open-infra-ai = 7、open-genomics = 7、vibe-knight 公开 = 14、retired = 4；每 repo 均有 `name`/`account`/`visibility`/`property`/`categories` 且 `categories` 非空。
+用 python 脚本断言：LessUp 原创 = 9、fork = 22、open-infra-ai = 7、holtwood-genomics = 7、vibe-knight 公开 = 14、retired = 4；每 repo 均有 `name`/`account`/`visibility`/`property`/`categories` 且 `categories` 非空。
 
 - [ ] **Step 4: 提交**
 
@@ -122,7 +122,7 @@ FIXTURE = {
          "property": "fork", "upstream": "NVIDIA/cuda-samples", "ahead": 26, "behind": 0,
          "language": "C++", "priority": "P1", "categories": ["forks-and-translations"],
          "notes": {"forks-and-translations": "说明A"}, "resume": False},
-        {"name": "fq-compressor", "account": "open-genomics", "visibility": "public",
+        {"name": "fq-compressor", "account": "holtwood-genomics", "visibility": "public",
          "property": "org-project", "language": "C++", "priority": "P0",
          "categories": ["original-projects", "hpc-and-transferable"],
          "notes": {"original-projects": {"position": "证据", "resume": "辅助"},
@@ -260,7 +260,7 @@ CATEGORY_CONFIG = {
         "cols": [repo_link, note("original-projects", "position"), note("original-projects", "resume")],
     },
     "original-projects-genomics": {
-        "title": "open-genomics — 生物信息与 C++ 工程（P0 辅助 / P2）",
+        "title": "holtwood-genomics — 生物信息与 C++ 工程（P0 辅助 / P2）",
         "headers": ["项目", "定位", "简历用法"],
         "cols": [repo_link, note("original-projects", "position"), note("original-projects", "resume")],
     },
@@ -369,8 +369,8 @@ def check(root=ROOT):
         if not f.exists():
             continue
         repos = [r for r in data["repos"] if slug.replace("-genomics", "") in r["categories"]
-                 and (slug != "original-projects-genomics" or r["account"] == "open-genomics")
-                 and (slug == "original-projects-genomics" or not (slug == "original-projects" and r["account"] == "open-genomics"))]
+                 and (slug != "original-projects-genomics" or r["account"] == "holtwood-genomics")
+                 and (slug == "original-projects-genomics" or not (slug == "original-projects" and r["account"] == "holtwood-genomics"))]
         table = render_table(repos, cfg)
         cmp(f, replace_placeholders(f, slug.replace("-genomics", ""), table))
     # README 概览与徽章
@@ -410,8 +410,8 @@ def main():
         if not f.exists():
             continue
         repos = [r for r in data["repos"] if slug.replace("-genomics", "") in r["categories"]
-                 and (slug != "original-projects-genomics" or r["account"] == "open-genomics")
-                 and (slug == "original-projects-genomics" or not (slug == "original-projects" and r["account"] == "open-genomics"))]
+                 and (slug != "original-projects-genomics" or r["account"] == "holtwood-genomics")
+                 and (slug == "original-projects-genomics" or not (slug == "original-projects" and r["account"] == "holtwood-genomics"))]
         table = render_table(repos, cfg)
         content = replace_placeholders(f, slug.replace("-genomics", ""), table)
         f.write_text(content, encoding="utf-8")
@@ -481,10 +481,10 @@ git add scripts/generate.py && git commit -m "feat: add generate.py renderer (ta
 <!-- AUTO:end <slug> -->
 ```
 
-具体 slug：`lessup-owned` / `forks-and-translations` / `organizations` / `original-projects`（open-infra-ai 表）/ `original-projects-genomics`（open-genomics 表）/ `hpc-and-transferable` / `tools-and-unrelated`。
+具体 slug：`lessup-owned` / `forks-and-translations` / `organizations` / `original-projects`（open-infra-ai 表）/ `original-projects-genomics`（holtwood-genomics 表）/ `hpc-and-transferable` / `tools-and-unrelated`。
 
 **关键**：
-- `original-projects.md` 有两张自动表 → 两个占位符：`<!-- AUTO:start original-projects -->`（open-infra-ai 6 仓）与 `<!-- AUTO:start original-projects-genomics -->`（open-genomics 7 仓）。标题、贡献者审计说明、vibe-knight 段保留在占位符外。
+- `original-projects.md` 有两张自动表 → 两个占位符：`<!-- AUTO:start original-projects -->`（open-infra-ai 6 仓）与 `<!-- AUTO:start original-projects-genomics -->`（holtwood-genomics 7 仓）。标题、贡献者审计说明、vibe-knight 段保留在占位符外。
 - `hpc-and-transferable.md` 的手工叙事行（"Fork: ompi"、"Fork: the-art-of-hpc-zh（已删除）"）移到占位符**之后**的"Fork 与已删除记录"小节。
 - `forks-and-translations.md` 顶部的"重要声明"段落与底部"归属与 License"段保留。
 - 占位符内先放临时表格（哪怕 1 行假数据），保证占位符存在。
@@ -652,7 +652,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "repos.json"
-ACCOUNTS = ["LessUp", "open-infra-ai", "open-genomics", "vibe-knight"]
+ACCOUNTS = ["LessUp", "open-infra-ai", "holtwood-genomics", "vibe-knight"]
 
 def gh(args, check=True):
     """运行 gh 命令，返回 stdout；失败抛异常。"""
@@ -1024,4 +1024,4 @@ Expected: `FINAL CHECK OK` + `ALL TESTS PASSED`。
 
 **2. Placeholder scan：** 无 TBD/TODO；每步含可执行命令或代码。
 
-**3. Type consistency：** `CATEGORY_CONFIG` 的 slug 在 Task 2 测试、Task 3 实现、Task 4 占位符、Task 5 渲染间一致；`original-projects-genomics` 子分类仅用于 open-genomics 表（original-projects.md 文件内两占位符）；`render_row`/`render_table`/`replace_placeholders`/`render_sidebar`/`check` 签名在 Task 2 测试与 Task 3 实现一致。
+**3. Type consistency：** `CATEGORY_CONFIG` 的 slug 在 Task 2 测试、Task 3 实现、Task 4 占位符、Task 5 渲染间一致；`original-projects-genomics` 子分类仅用于 holtwood-genomics 表（original-projects.md 文件内两占位符）；`render_row`/`render_table`/`replace_placeholders`/`render_sidebar`/`check` 签名在 Task 2 测试与 Task 3 实现一致。

@@ -26,7 +26,7 @@
 | 比赛与 benchmark | [holtwood-arena](https://github.com/holtwood-arena) | 活跃 | CANN / FlagOS / Kunpeng / Muse 工作区、题解记录与公开 `race` 实验室 |
 | 上游研读 | [holtwood-forks](https://github.com/holtwood-forks) | 常驻 | 上游源码阅读副本与本地补丁分支；不主张原创，不进入作品集计数 |
 | 历史应用 | [holtwood-projects](https://github.com/holtwood-projects) | 归档维护 | 可运行的应用与工具项目，只做必要修复 |
-| 生信旧主线 | [open-genomics](https://github.com/open-genomics) | 归档维护 | 生物信息与 C++/Rust 系统软件，只做必要修复 |
+| 生信旧主线 | [holtwood-genomics](https://github.com/holtwood-genomics) | 归档维护 | 生物信息与 C++/Rust 系统软件，只做必要修复 |
 
 归属判据、晋升规则、补丁规则、归档条件与命名规则见 **[ARCHITECTURE.md](ARCHITECTURE.md)**。
 
@@ -90,7 +90,7 @@
 | holtwood-arena（比赛与 benchmark） | 38 | 6 | 32 | 0 |
 | holtwood-forks（上游研读） | 32 | 32 | 0 | 31 |
 | holtwood-projects（历史应用与工具 · 维护模式） | 24 | 23 | 1 | 0 |
-| open-genomics（生信旧主线 · 维护模式） | 13 | 9 | 4 | 0 |
+| holtwood-genomics（生信旧主线 · 维护模式） | 13 | 9 | 4 | 0 |
 <!-- AUTO:end accounts -->
 
 > 口径：账号概览是徽章所示审计日的全量快照（私有仅计数量，不列名称）；下方分类表是

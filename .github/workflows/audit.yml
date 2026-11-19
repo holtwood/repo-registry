@@ -12,7 +12,7 @@ jobs:
   audit:
     runs-on: ubuntu-latest
     env:
-      # audit.py 需跨账号读取仓库列表（holtwood / holtwood-systems / holtwood-arena / open-genomics /
+      # audit.py 需跨账号读取仓库列表（holtwood / holtwood-systems / holtwood-arena / holtwood-genomics /
       # holtwood-projects / holtwood-forks），仓库级的 GITHUB_TOKEN
       # 作用域仅限本仓库，权限不足，
       # 因此使用 PAT（secret 名 AUDIT_TOKEN）。

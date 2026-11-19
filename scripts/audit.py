@@ -24,7 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "repos.json"
 # 2026-11-06 组织终态：open-infra-ai -> holtwood-systems，cannjudge -> holtwood-arena。
 # GitHub 对旧名做仓库级 301，但组织根 404；gh repo list 不接受旧名。
-ACCOUNTS = ["holtwood", "holtwood-systems", "holtwood-arena", "open-genomics",
+ACCOUNTS = ["holtwood", "holtwood-systems", "holtwood-arena", "holtwood-genomics",
             "holtwood-projects", "holtwood-forks"]
 
 # DMCA 下架仓库：API 返回 451，GitHub 不提供删除或转移入口，属长期已知状态，

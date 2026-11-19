@@ -25,7 +25,7 @@
 
 - 账号概览统计全部仓库（含私有数量，不列私有名称）。
 - `data/repos.json` 是主题索引，不是全量镜像：收录全部 Fork、`holtwood-systems` 当前主线、
-  `holtwood-arena` 公开赛道、`open-genomics` 与 `holtwood-projects` 的历史代表作，以及个人号
+  `holtwood-arena` 公开赛道、`holtwood-genomics` 与 `holtwood-projects` 的历史代表作，以及个人号
   的原创与索引仓库。其余公开仓库不强行补录，避免为凑数写没有证据的描述。
 
 ## 约束

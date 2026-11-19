@@ -84,7 +84,7 @@ github-repos-hub/
   "accounts": {
     "LessUp":       { "public": 31, "private": 1, "forks": 22, "note": "个人" },
     "open-infra-ai":{ "public": 7,  "private": 0, "forks": 0,  "note": "AI Infra 作品集" },
-    "open-genomics":{ "public": 7,  "private": 5, "forks": 0,  "note": "生物信息与 C++ 工程" },
+    "holtwood-genomics":{ "public": 7,  "private": 5, "forks": 0,  "note": "生物信息与 C++ 工程" },
     "vibe-knight":  { "public": 14, "private": 1, "forks": 0,  "note": "实验性与工具" }
   },
   "repos": [
@@ -122,7 +122,7 @@ github-repos-hub/
 | 字段 | 必填 | 说明 |
 |------|------|------|
 | `name` | 是 | 仓库名（不含 owner） |
-| `account` | 是 | 所属账号/组织：LessUp / open-infra-ai / open-genomics / vibe-knight |
+| `account` | 是 | 所属账号/组织：LessUp / open-infra-ai / holtwood-genomics / vibe-knight |
 | `visibility` | 是 | 仅 `public`（`repos[]` 只含公开仓库，私有仓库名称不落库，见下方约束） |
 | `property` | 是 | original / fork / translation / org-project / migrated / retired |
 | `upstream` | 否 | 仅 fork/translation：`owner/repo` 上游地址 |
@@ -141,11 +141,11 @@ github-repos-hub/
 |------|------|-------------|
 | `lessup-owned` | catalog/lessup-owned.md | 9 个原创公开仓库全表自动 |
 | `forks-and-translations` | catalog/forks-and-translations.md | 22 个 fork 全表自动 |
-| `organizations` | catalog/organizations.md | open-infra-ai 仓库表自动（7 行）；open-genomics/vibe-knight 叙事段落手工 |
-| `original-projects` | catalog/original-projects.md | open-infra-ai 与 open-genomics 两张表自动；vibe-knight 列举段手工（note 承载证据文字） |
+| `organizations` | catalog/organizations.md | open-infra-ai 仓库表自动（7 行）；holtwood-genomics/vibe-knight 叙事段落手工 |
+| `original-projects` | catalog/original-projects.md | open-infra-ai 与 holtwood-genomics 两张表自动；vibe-knight 列举段手工（note 承载证据文字） |
 | `ai-infra` | catalog/ai-infra.md | **全手工**（P0 表为"项目组 + 多仓库合并列"分组叙事，数据化收益低，见 §8） |
 | `hpc-and-transferable` | catalog/hpc-and-transferable.md | 主表格自动；Fork/已删除叙事行保留手工 |
-| `tools-and-unrelated` | catalog/tools-and-unrelated.md | LessUp 个人表自动；vibe-knight/open-genomics 分组列举保留手工 |
+| `tools-and-unrelated` | catalog/tools-and-unrelated.md | LessUp 个人表自动；vibe-knight/holtwood-genomics 分组列举保留手工 |
 | `retired-and-migrated` | catalog/retired-and-migrated.md | 全手工（历史记录，见 §8 决策） |
 
 **私有仓库约束**（遵循 methodology.md）：`repos[]` **只含公开仓库**。私有仓库

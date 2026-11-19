@@ -30,7 +30,7 @@ FIXTURE = {
          "property": "fork", "upstream": "NVIDIA/cuda-samples", "ahead": 26, "behind": 0,
          "language": "C++", "priority": "P1", "categories": ["forks-and-translations"],
          "notes": {"forks-and-translations": "说明A"}, "resume_level": "低"},
-        {"name": "fq-compressor", "account": "open-genomics", "visibility": "public",
+        {"name": "fq-compressor", "account": "holtwood-genomics", "visibility": "public",
          "property": "org-project", "language": "C++", "priority": "P0",
          "categories": ["original-projects", "hpc-and-transferable"],
          "notes": {"original-projects": {"position": "证据", "resume": "辅助"},
@@ -48,7 +48,7 @@ FIXTURE = {
          "property": "org-project", "language": "C++", "priority": "P0",
          "contributors": "holtwood", "categories": ["original-projects"],
          "notes": {"original-projects": {"position": "CUDA 推理引擎", "resume": "主线"}}},
-        {"name": "minibwa-rust", "account": "open-genomics", "visibility": "public",
+        {"name": "minibwa-rust", "account": "holtwood-genomics", "visibility": "public",
          "property": "org-project", "language": "Rust", "priority": "P0",
          "categories": ["original-projects"], "notes": {}},
         {"name": "plain-org", "account": "holtwood-systems", "visibility": "public",
@@ -126,8 +126,8 @@ expect_featured = {
     "study-plan": True,   # original resume 中
     "repos-db": False,             # original resume 低
     "tiny-llm": True,                  # org P0 contributors=holtwood
-    "minibwa-rust": False,             # open-genomics 旧主线不进精选
-    "fq-compressor": False,            # open-genomics 旧主线不进精选
+    "minibwa-rust": False,             # holtwood-genomics 旧主线不进精选
+    "fq-compressor": False,            # holtwood-genomics 旧主线不进精选
     "plain-org": True,                 # org P0 contributors=holtwood
     "cudaimg": False,                  # org P2
     "some-org-proj": False,            # org P0 但 contributors=Lumkai
@@ -145,14 +145,14 @@ import re as _re
 names_in_feat = _re.findall(r"\[([^\]]+)\]\(https://github\.com/", feat1)
 check("精选去重", len(names_in_feat) == len(set(names_in_feat)), names_in_feat)
 
-# T-C. 精选只保留当前主线：holtwood-systems 先于 holtwood；open-genomics 不进精选
+# T-C. 精选只保留当前主线：holtwood-systems 先于 holtwood；holtwood-genomics 不进精选
 def _row_account(name):
     # 行形如 | [name](https://github.com/acct/name) | lang | acct | tagline |
     line = next(l for l in feat1.splitlines() if f"[{name}](https://github.com/"
                 in l and l.startswith("| ["))
     return line.split("|")[3].strip()
 
-check("精选排除 open-genomics",
+check("精选排除 holtwood-genomics",
       "fq-compressor" not in feat1 and "minibwa-rust" not in feat1)
 check("精选排序 holtwood-systems 先于 holtwood",
       feat1.find("tiny-llm") < feat1.find("study-plan"))

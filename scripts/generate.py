@@ -82,7 +82,7 @@ CATEGORY_CONFIG = {
                  note("original-projects", "resume")],
     },
     "original-projects-genomics": {
-        "title": "open-genomics — 旧主线（维护模式）",
+        "title": "holtwood-genomics — 旧主线（维护模式）",
         "headers": ["项目", "定位", "简历用法"],
         "cols": [repo_link, note("original-projects", "position"),
                  note("original-projects", "resume")],
@@ -116,10 +116,10 @@ def repos_for_slug(data, slug):
                 and r["account"] == "holtwood"]
     if slug == "original-projects-genomics":
         return [r for r in data["repos"] if base in r["categories"]
-                and r["account"] == "open-genomics"]
+                and r["account"] == "holtwood-genomics"]
     if slug == "original-projects":
         return [r for r in data["repos"] if base in r["categories"]
-                and r["account"] != "open-genomics"]
+                and r["account"] != "holtwood-genomics"]
     return [r for r in data["repos"] if base in r["categories"]]
 
 
@@ -281,7 +281,7 @@ def is_featured(r):
     """主要开发项目入选规则：original（简历高/中）或 org-project（P0 且个人主导）。"""
     if r.get("name") in FEATURED_EXCLUDE:
         return False
-    if r.get("account") == "open-genomics":
+    if r.get("account") == "holtwood-genomics":
         return False
     if r.get("property") == "original":
         return r.get("resume_level") in ("高", "中")

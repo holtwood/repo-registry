@@ -13,7 +13,7 @@
 | holtwood-arena | Holtwood Arena | 比赛与 benchmark：公开赛道 + 私有赛事工作区 | 仅 holtwood |
 | holtwood-forks | Holtwood Forks | 上游源码研读副本，无原创项目 | 仅 holtwood |
 | holtwood-projects | Holtwood Projects | 历史应用与工具项目，维护模式 | 仅 holtwood |
-| open-genomics | Open Genomics | 生信系统软件旧主线，维护模式 | 仅 holtwood |
+| holtwood-genomics | Holtwood Genomics | 生信系统软件旧主线，维护模式 | 仅 holtwood |
 
 ## holtwood-systems（原创 AI Infra / HPC）
 
@@ -66,7 +66,7 @@
 [original-projects.md](original-projects.md)。与 AI Infra 主线弱相关，个别
 （compress-kit、cudaimg、cloud-bench）可作为辅助证据。
 
-## open-genomics（生信旧主线）
+## holtwood-genomics（生信旧主线）
 
 9 个公开仓库 + 4 个私有仓库，维护模式。生物信息是过去的主线，不再是当前重点；
 仓库保留可复现性与必要的维护修复，不新增主线功能。fq-compressor / fastq-tools /
