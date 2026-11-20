@@ -20,7 +20,7 @@
 - 数据快照更新（2026-11-19）：ahead/behind 与链接状态已刷新
 - 2026-11-19 本地目录治理：未版本控制的 AMD 工作区建为私有仓，`_inbox` 暂存非仓库材料，清理 4 个空占位目录
 - 2026-11-18 二次治理：ucup 迁入 arena 并登记分组；新增 chip/huawei 分组与 custom properties；修复 4 处指向已撤销组织域名的死链；补齐 homepage/topics；ARCHITECTURE 增加本地工作区与默认分支约定
-- 2026-11-18 复核：chip-2026-task1-patientphex 迁入 arena，私有试点仓迁入 systems，个人执行材料归私有仓、旧面试材料仓归档；wechat-miniprogram 更名为 wechat-miniprograms；索引刷新至 147 仓库
+- 2026-11-18 复核：chip-2026-task1-patientphex 迁入 arena，私有试点仓迁入 systems，个人执行材料归私有仓、旧面试材料仓归档；个人小程序私有仓完成改名（名称不公开列举）；索引刷新至 147 仓库
 - 架构收敛（2026-11-09）：gpumode-vectorsum / tensortonic-solutions 迁入 holtwood-arena，Ascend 实验线迁入 holtwood-systems；私有仓库移出公开目录；账号统计改为由 total-public 推导；新增 ARCHITECTURE.md 决策记录
 - 仓库导航按新组织架构重排：`holtwood`（个人主品牌）、`holtwood-systems`（AI Infra / HPC）、
   `holtwood-arena`（比赛与 benchmark）、`holtwood-forks`（上游研读）、`holtwood-projects`
