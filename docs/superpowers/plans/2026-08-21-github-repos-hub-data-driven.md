@@ -53,7 +53,7 @@
 
 **repos[] 数据来源与字段**（示例见 spec §4；每仓库必须含 `name`/`account`/`visibility:"public"`/`property`/`categories`）：
 
-- `lessup-owned` 9 个（LessUp 原创公开）：`ai-infra-interview-prep`、`github-repos-hub`、`stars-index`、`cpp-high-performance-guide`、`bitcal`、`TensorTonic-Solutions`、`awesome-cursorrules-zh`、`hugo-blog`、`LessUp`。字段含 `language`/`domain`/`ai_relevance`(高/中/低/无)/`resume_level`(高/中/低)/`resume`(bool)/`notes.lessup-owned`。
+- `lessup-owned` 9 个（LessUp 原创公开）：`旧面试材料仓`、`github-repos-hub`、`stars-index`、`cpp-high-performance-guide`、`bitcal`、`TensorTonic-Solutions`、`awesome-cursorrules-zh`、`hugo-blog`、`LessUp`。字段含 `language`/`domain`/`ai_relevance`(高/中/低/无)/`resume_level`(高/中/低)/`resume`(bool)/`notes.lessup-owned`。
 - `forks-and-translations` 22 个 fork：`property:"fork"`，含 `upstream`/`ahead`/`behind`/`language`/`priority`/`notes.forks-and-translations`。注意 `Termius-Pro-zh_CN` 的 `priority:"无"`，`tutorials`（Triton Inference Server）的 upstream 是 `triton-inference-server/tutorials`。
 - `organizations` 7 个（open-infra-ai）：`aicl-lab`、`cuda-foundations`、`triton-fused-ops`、`cuflash-attn`、`tiny-llm`、`paged-infer`、`.github`。字段含 `license`/`contributors`/`notes.organizations`（定位文字）。`.github` 的 language/license 为空字符串。
 - `original-projects` 的 open-infra-ai 6 个 + holtwood-genomics 7 个：`notes["original-projects"]` 用**对象** `{"position": "...", "resume": "..."}` 承载"定位与证据"与"简历用法"两列。

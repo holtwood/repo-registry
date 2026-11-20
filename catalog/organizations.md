@@ -17,7 +17,7 @@
 
 ## holtwood-systems（原创 AI Infra / HPC）
 
-10 个公开仓库（含 1 个归档旧名仓库），贡献者审计仅 holtwood（另有 CI/dependabot bot）。这是当前简历主线；
+9 个公开仓库，贡献者审计仅 holtwood（另有 CI/dependabot bot）。这是当前简历主线；
 下列仓库可以如实表述为“个人主导开发”的组织仓库。
 
 <!-- AUTO:start organizations -->
@@ -31,7 +31,6 @@
 | [tiny-llm](https://github.com/holtwood-systems/tiny-llm) | C++ | MIT | holtwood | L4：CUDA 原生 C++ 推理引擎（GGUF/W8A16/分页 KV） |
 | [paged-serving](https://github.com/holtwood-systems/paged-serving) | Rust | MIT | holtwood | L4：PagedAttention 分页 KV + Continuous Batching 控制面 |
 | [.github](https://github.com/holtwood-systems/.github) | - | - | - | 组织级配置 |
-| [open-infra-ai](https://github.com/holtwood-systems/open-infra-ai) | TypeScript | - | - | [archived] 旧组织名重复仓库，内容已由 portfolio 承接 |
 | [kvtier](https://github.com/holtwood-systems/kvtier) | Python | - | holtwood | 主动研究：SGLang HiCache / vLLM KV offloading 的分层复现 |
 <!-- AUTO:end organizations -->
 
@@ -40,10 +39,12 @@
 
 ## holtwood-arena（比赛与 benchmark）
 
-4 个公开仓库（`race`、`kunpeng-s2-conv`、`kunpeng-s3-openfoam`、`.github`）与 25 个私有
-赛事工作区。私有工作区不在公开文档中列举，也不因比赛结束自动公开。
+6 个公开仓库（`perf-race-lab`、`gpumode-vectorsum`、`tensortonic-solutions`、
+`kunpeng-s2-conv`、`kunpeng-s3-openfoam`、`.github`）与 32 个私有赛事工作区。
+私有工作区不在公开文档中列举，也不因比赛结束自动公开。
 
-2026-11-06：CANN 2026 电力行业算子专场已结束；十月天梯赛与早期 CANN 挑战赛已归档。
+2026-11：CANN 2026 电力行业算子专场、十月天梯赛与早期挑战赛均已结束；
+FlagOS / Muse / AMD / ucup 等系列仍在推进。
 公开入口只保留已脱敏、可复现的材料；比赛账号、提交记录与未脱敏题面不进入本仓库。
 
 ## holtwood-forks（上游研读副本）

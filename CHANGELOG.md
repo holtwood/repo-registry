@@ -5,9 +5,10 @@
 ## [2026-11-19]
 
 ### Changed
+- 治理：公开输出统一过滤非公开仓库（生成器 + 回归测试），公开数据移除 2 条私有仓记录；同步组织公开仓库计数
 - 治理：移除公开文档中的私有赛事仓名称，并将 `groups/` 说明收口为三棵语义树。
 - 治理：刷新私有学习项目迁移后的账号统计与审计数据
-- 仓库由 `holtwood/repos-db` 更名为 `holtwood/repo-registry`，私有对照页同步为 `repo-registry-private`；
+- 仓库由 `holtwood/repos-db` 更名为 `holtwood/repo-registry`，私有对照仓同步更名；
   Star 索引由 `holtwood/stars-db` 更名为 `holtwood/stars-index`。
 - `ARCHITECTURE.md §6` 命名规则改为 `-registry` / `-index` 两类，并记录 Pages 断链处理方式：
   旧仓名保留为跳转仓，旧 project site URL 指向新站点。
@@ -17,10 +18,10 @@
 
 ### Changed
 - 数据快照更新（2026-11-19）：ahead/behind 与链接状态已刷新
-- 2026-11-19 本地目录治理：amd 建仓为 amd-2026-ai-league，_inbox 暂存非仓库材料，清理 4 个空占位目录
+- 2026-11-19 本地目录治理：未版本控制的 AMD 工作区建为私有仓，`_inbox` 暂存非仓库材料，清理 4 个空占位目录
 - 2026-11-18 二次治理：ucup 迁入 arena 并登记分组；新增 chip/huawei 分组与 custom properties；修复 4 处指向已撤销组织域名的死链；补齐 homepage/topics；ARCHITECTURE 增加本地工作区与默认分支约定
-- 2026-11-18 复核：chip-2026-task1-patientphex 迁入 arena，parakit 迁入 systems，career-prep 归个人号，ai-infra-interview-prep 归档；wechat-miniprogram 更名为 wechat-miniprograms；索引刷新至 147 仓库
-- 架构收敛（2026-11-09）：gpumode-vectorsum / tensortonic-solutions 迁入 holtwood-arena，ascend-llm-infra-lab 迁入 holtwood-systems；私有仓库移出公开目录；账号统计改为由 total-public 推导；新增 ARCHITECTURE.md 决策记录
+- 2026-11-18 复核：chip-2026-task1-patientphex 迁入 arena，私有试点仓迁入 systems，个人执行材料归私有仓、旧面试材料仓归档；wechat-miniprogram 更名为 wechat-miniprograms；索引刷新至 147 仓库
+- 架构收敛（2026-11-09）：gpumode-vectorsum / tensortonic-solutions 迁入 holtwood-arena，Ascend 实验线迁入 holtwood-systems；私有仓库移出公开目录；账号统计改为由 total-public 推导；新增 ARCHITECTURE.md 决策记录
 - 仓库导航按新组织架构重排：`holtwood`（个人主品牌）、`holtwood-systems`（AI Infra / HPC）、
   `holtwood-arena`（比赛与 benchmark）、`holtwood-forks`（上游研读）、`holtwood-projects`
   （历史应用）、`holtwood-genomics`（生信旧主线，维护模式）。
@@ -34,7 +35,7 @@
 ## [Unreleased] — 2026-11-03
 
 ### Fixed
-- README 两处指向 `open-infra-ai/ai-infra-interview-prep` 的失效公开链接：该仓已于 2026-10-25 迁回 `holtwood` 并转私有，改为按私有仓表述（职责边界表同步）。
+- README 两处指向旧面试材料仓的失效公开链接：该仓已于 2026-10-25 迁回个人号并转私有，改为按私有仓泛化表述（职责边界表同步）。
 - `JadeAI` 实为 `LingyiChen-AI/JadeAI` 的 fork，自 `holtwood-projects` 迁回 `holtwood-forks`，repos.json 同步修正 account/property/upstream。
 
 ### Added
@@ -67,10 +68,10 @@
 
 - 删除被 `catalog/` 取代的旧扁平分类文件：ai-infra-core.md、ai-infra-auxiliary.md、
   hpc-and-systems.md、personal-projects.md、tools-and-others.md、repo-index.md、
-  learning-path.md（与 ai-infra-interview-prep 中同名文件逐字节相同，经 diff 验证；
-  learning-path 属于学习计划，保留在 ai-infra-interview-prep）。
+  learning-path.md（与私有执行仓中同名文件逐字节相同，经 diff 验证；
+  learning-path 属于学习计划，保留在私有执行仓）。
 
 ### Unchanged
 
 - `deep-dives/`（21 个仓库深读笔记）保留在本仓库，作为唯一事实来源；
-  ai-infra-interview-prep 中的相同副本已在该仓库删除（见其 CHANGELOG）。
+  私有执行仓中的相同副本已在彼处删除（见其 CHANGELOG）。

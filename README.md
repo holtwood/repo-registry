@@ -8,14 +8,14 @@
 > 面向访客的精选入口是 **[imshane.site/projects](https://imshane.site/projects)**。
 
 > `repo-registry` 是「结构化数据（`data/repos.json`）+ 生成视图」的仓库登记层，不是数据库服务；
-> 同族的 `stars-index` 负责 Star 收藏索引，`repo-registry-private` 负责私有台账。
+> 同族的 `stars-index` 负责 Star 收藏索引，另有私有对照台账仓（名称不在本文列举）。
 > 2026-11-19 由 `repos-db` / `stars-db` 更名，旧 Pages 地址保留跳转页；决策见
 > [ARCHITECTURE.md §6](ARCHITECTURE.md)。
 
 审计日期与总量以下方徽章为准（由 `scripts/audit.py` 刷新，方法见 [methodology.md](methodology.md)）。
 
 <!-- AUTO:start badges -->
-![审计日期](https://img.shields.io/badge/审计-2026--11--19-4c9) ![仓库总数](https://img.shields.io/badge/仓库-151-4c9) ![公开](https://img.shields.io/badge/公开-92-blue) ![Fork](https://img.shields.io/badge/Fork-31-orange) ![竞赛](https://img.shields.io/badge/竞赛-3-blue) ![赛题](https://img.shields.io/badge/赛题-15-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
+![审计日期](https://img.shields.io/badge/审计-2026--11--20-4c9) ![仓库总数](https://img.shields.io/badge/仓库-151-4c9) ![公开](https://img.shields.io/badge/公开-92-blue) ![Fork](https://img.shields.io/badge/Fork-31-orange) ![竞赛](https://img.shields.io/badge/竞赛-3-blue) ![赛题](https://img.shields.io/badge/赛题-15-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
 <!-- AUTO:end badges -->
 
 ## 🧭 架构

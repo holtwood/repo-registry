@@ -1,5 +1,5 @@
 {
-  "audited_at": "2026-11-19",
+  "audited_at": "2026-11-20",
   "accounts": {
     "holtwood": {
       "public": 13,
@@ -378,7 +378,7 @@
       "property": "fork",
       "upstream": "Dao-AILab/flash-attention",
       "ahead": 2,
-      "behind": 110,
+      "behind": 111,
       "language": "Python/CUDA",
       "priority": "P2",
       "categories": [
@@ -396,7 +396,7 @@
       "property": "fork",
       "upstream": "flashinfer-ai/flashinfer",
       "ahead": 8,
-      "behind": 3432,
+      "behind": 3447,
       "language": "Python/CUDA",
       "priority": "P2",
       "categories": [
@@ -414,7 +414,7 @@
       "property": "fork",
       "upstream": "vllm-project/vllm",
       "ahead": 14,
-      "behind": 6174,
+      "behind": 6234,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -432,7 +432,7 @@
       "property": "fork",
       "upstream": "sgl-project/sglang",
       "ahead": 12,
-      "behind": 6663,
+      "behind": 6703,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -450,7 +450,7 @@
       "property": "fork",
       "upstream": "NVIDIA/TensorRT-LLM",
       "ahead": 1,
-      "behind": 3000,
+      "behind": 3022,
       "language": "Python/C++",
       "priority": "P2",
       "categories": [
@@ -468,7 +468,7 @@
       "property": "fork",
       "upstream": "triton-lang/triton",
       "ahead": 0,
-      "behind": 785,
+      "behind": 804,
       "language": "MLIR",
       "priority": "P2",
       "categories": [
@@ -504,7 +504,7 @@
       "property": "fork",
       "upstream": "ModelTC/LightLLM",
       "ahead": 12,
-      "behind": 153,
+      "behind": 155,
       "language": "Python",
       "priority": "P2",
       "categories": [
@@ -812,23 +812,6 @@
       "notes": {
         "organizations": "组织级配置"
       }
-    },
-    {
-      "name": "open-infra-ai",
-      "account": "holtwood-systems",
-      "visibility": "private",
-      "property": "org-project",
-      "language": "TypeScript",
-      "domain": "归档旧名",
-      "ai_relevance": "无",
-      "archived": true,
-      "categories": [
-        "organizations"
-      ],
-      "notes": {
-        "organizations": "[archived] 旧组织名重复仓库，内容已由 portfolio 承接"
-      },
-      "links_ok": true
     },
     {
       "name": "fq-compressor",
@@ -1243,20 +1226,6 @@
         "holtwood-owned": "AI Infra（LLM serving）学习计划：kernel、vLLM/SGLang 内部与 mini serving engine"
       },
       "links_ok": true
-    },
-    {
-      "name": "ascend-llm-infra-lab",
-      "account": "holtwood-systems",
-      "visibility": "private",
-      "property": "org-project",
-      "language": "Python",
-      "domain": "AI Infra 实验",
-      "ai_relevance": "高",
-      "resume_level": "高",
-      "categories": [],
-      "notes": {},
-      "links_ok": true,
-      "private_note": "私有实验仓库；公开目录不列举私有仓库名称与描述（见 methodology.md 约束）"
     },
     {
       "name": "ai-infra-radar",

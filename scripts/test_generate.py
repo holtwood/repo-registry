@@ -182,6 +182,50 @@ with tempfile.TemporaryDirectory() as td:
 check("精选区无私有仓库",
       all(REPO_BY_NAME[n].get("visibility") == "public" for n in names_in_feat))
 
+# T-K. 私有仓库不得进入任何渲染输出（ARCHITECTURE.md §7 回归测试）
+# 数据层保留 visibility 字段用于审计发现"转私有"的仓库，但渲染必须统一过滤。
+_PRIVATE_FIXTURE = json.loads(json.dumps(FIXTURE))
+_PRIVATE_FIXTURE["repos"].append({
+    "name": "secret-lab", "account": "holtwood-systems", "visibility": "private",
+    "property": "org-project", "language": "Python", "priority": "P0",
+    "resume_level": "高", "contributors": "holtwood",
+    "categories": ["organizations", "original-projects", "holtwood-owned",
+                   "hpc-and-transferable", "forks-and-translations"],
+    "notes": {"organizations": "私有实验台", "holtwood-owned": "私有",
+              "original-projects": {"position": "私有", "resume": "私有"},
+              "forks-and-translations": "私有",
+              "hpc-and-transferable": {"signal": "私有", "usage": "私有"}},
+    "upstream": "fake/upstream", "ahead": 1, "behind": 1,
+})
+check("public_repos 过滤私有仓",
+      all(r["visibility"] == "public" for r in generate.public_repos(_PRIVATE_FIXTURE))
+      and len(generate.public_repos(_PRIVATE_FIXTURE)) == len(FIXTURE["repos"]))
+_slug_outputs = {slug: generate.render_table(
+    generate.repos_for_slug(_PRIVATE_FIXTURE, slug), cfg)
+    for slug, cfg in generate.CATEGORY_CONFIG.items()}
+check("各分类表格不含私有仓",
+      all("secret-lab" not in t for t in _slug_outputs.values()),
+      [s for s, t in _slug_outputs.items() if "secret-lab" in t])
+check("精选区不含私有仓", "secret-lab" not in generate.render_featured(_PRIVATE_FIXTURE))
+check("私有仓不被 is_featured 选中",
+      generate.is_featured(next(r for r in _PRIVATE_FIXTURE["repos"]
+                                if r["name"] == "secret-lab")) is False)
+
+# T-L. 真实数据守卫：repos.json 中任何 visibility!=public 的记录，其名称
+# 都不得出现在任何生成视图里（catalog / README / sidebar）。
+_real_data = json.loads((Path(__file__).parent.parent / "data" / "repos.json")
+                        .read_text(encoding="utf-8"))
+_private_names = [r["name"] for r in _real_data["repos"]
+                  if r.get("visibility") != "public" and len(r["name"]) >= 5]
+_rendered = [generate.render_table(generate.repos_for_slug(_real_data, slug), cfg)
+             for slug, cfg in generate.CATEGORY_CONFIG.items()]
+_rendered += [generate.render_featured(_real_data),
+              generate.render_badges(_real_data, generate.load_contests()),
+              generate.render_sidebar(_real_data)]
+_leaked = [n for n in _private_names
+           if any(n in t for t in _rendered)]
+check("真实数据生成的视图不含私有仓名", not _leaked, str(_leaked))
+
 # --- 竞赛与赛题（render_contest_* / competitions_blocks） ---
 CONTESTS_FIXTURE = {
     "platforms": {"cannjudge": {"name": "CANNJudge", "url": "https://cannjudge.cn"}},

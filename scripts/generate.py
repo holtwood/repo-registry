@@ -108,19 +108,30 @@ def load_data():
         return json.load(f)
 
 
+def public_repos(data):
+    """所有渲染路径的唯一入口：只返回公开仓库。
+
+    repos.json 记录 visibility 是为了在仓库转私有后能被审计发现，但私有仓库的
+    名称与描述不得进入任何公开输出（ARCHITECTURE.md §7）。过滤放在这里，
+    而不是每个分类各自实现，避免新增分类时漏掉。
+    """
+    return [r for r in data["repos"] if r.get("visibility") == "public"]
+
+
 def repos_for_slug(data, slug):
-    """返回某分类（渲染 slug）对应的仓库列表。"""
+    """返回某分类（渲染 slug）对应的公开仓库列表。"""
     base = slug.replace("-genomics", "")
+    repos = public_repos(data)
     if slug == "holtwood-owned":
-        return [r for r in data["repos"] if base in r["categories"]
+        return [r for r in repos if base in r["categories"]
                 and r["account"] == "holtwood"]
     if slug == "original-projects-genomics":
-        return [r for r in data["repos"] if base in r["categories"]
+        return [r for r in repos if base in r["categories"]
                 and r["account"] == "holtwood-genomics"]
     if slug == "original-projects":
-        return [r for r in data["repos"] if base in r["categories"]
+        return [r for r in repos if base in r["categories"]
                 and r["account"] != "holtwood-genomics"]
-    return [r for r in data["repos"] if base in r["categories"]]
+    return [r for r in repos if base in r["categories"]]
 
 
 def render_row(repo, config):
@@ -279,6 +290,8 @@ def featured_tagline(r):
 
 def is_featured(r):
     """主要开发项目入选规则：original（简历高/中）或 org-project（P0 且个人主导）。"""
+    if r.get("visibility") != "public":
+        return False
     if r.get("name") in FEATURED_EXCLUDE:
         return False
     if r.get("account") == "holtwood-genomics":

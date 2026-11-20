@@ -53,7 +53,7 @@
 
 满足任一即归档，并在描述开头写明 `Archived: superseded by X` 或 `归档：不再推进`：
 
-- 能力已被同领域后继仓库覆盖（例：`bwa-rust` → `minibwa-rust`，`open-infra-ai` → `portfolio`）；
+- 能力已被同领域后继仓库覆盖（例：`bwa-rust` → `minibwa-rust`，旧组织名重复仓 → `portfolio`）；
 - 领域主线整体停止投入（例：生信主线转入维护模式）；
 - 赛期与赛后整理均已结束。
 
@@ -62,22 +62,22 @@
 ## 6. 命名规则
 
 - 组织一律 `holtwood-<域>`，全部小写连字符；不接受不带前缀的组织名（会读成社区项目，也会从命名空间里漏出去）。
-- 仓库名 = **主体 + 可选类型后缀**，全小写；多词用连字符，单 token 品牌名不加连字符（`bitcal`、`utop`、`wb2api`、`recipegrid`、`cudaimg`）。
-- 类型后缀**允许且鼓励**，但必须一个词、能消歧。现行约定（由 141 个存量仓库归纳，不是臆造）：
+- 仓库名 = **主体 + 可选类型后缀**，全小写；多词用连字符，单 token 品牌名不加连字符（`bitcal`、`utop`、`wb2api`、`cudaimg`）。
+- 类型后缀**允许且鼓励**，但必须一个词、能消歧。现行约定（由存量仓库归纳，不是臆造；示例只取公开仓）：
 
 | 后缀 | 用在 | 现存例子 |
 |---|---|---|
 | `-index` | 结构化数据 + 生成视图的索引层 | `stars-index` `arena-index` |
-| `-registry` | 权威登记 / 治理台账 | `repo-registry` `repo-registry-private` |
+| `-registry` | 权威登记 / 治理台账 | `repo-registry`（另有同名私有对照仓） |
 | `-guide` / `-foundations` | 教学与学习主线 | `cpp-high-performance-guide` `cuda-foundations` |
-| `-plan` / `-prep` / `-kit` | 计划、求职资料、工具集 | `ai-infra-serving-study-plan` `career-prep` `agent-skills-kit` |
-| `-lab` | 实验体系 | `ascend-llm-infra-lab` |
+| `-plan` / `-prep` / `-kit` | 计划、求职资料、工具集 | `ai-infra-serving-study-plan`（另有私有执行仓与私有工具集） |
+| `-lab` | 实验体系 | 私有实验仓（名称不公开） |
 | `-site` | 站点仓库 | `imshane-site` |
-| `-server` | 与同名项目配套的服务端 | `cloud-bench-server` |
-| `-minigame` | 微信小游戏（区别于小程序） | `melon-bump-minigame` |
+| `-server` | 与同名项目配套的服务端 | `cloud-bench` 配套服务端（私有） |
+| `-minigame` | 微信小游戏（区别于小程序） | 个人小程序仓（私有） |
 | `-rust` / `-zh_CN` 等 | 同一工具的第二实现 / 本地化变体 | `fq-compressor-rust` `minibwa-rust` |
 
-- 竞赛仓库：`<赛事>-<年份>-<赛道>-<序号>-<题目slug>`，例 `cann-2026-power-04-det`。
+- 竞赛仓库：`<赛事>-<年份>-<赛道>-<序号>-<题目slug>`（私有赛题仓完整实例见私有台账）。
 - Fork 沿用上游名，不改（`vllm`、`Triton-Puzzles`、`Termius-Pro-zh_CN`）。
 - 反面清单：不要把语言写进名字（`xxx-cpp`）；不要造无信息量的泛名（`my-project`、`tools`）；不要在一个功能域里混三种命名风格。
 - 默认不为整齐而批量重命名；确需改名时必须同时处理 Pages 断链（同名跳转仓或自定义域名）并更新全部索引。
@@ -86,7 +86,7 @@
 
 `-db` 容易被读成数据库服务，实际两者都是「JSON 事实源 + 生成视图」。本次按显式决策更名：
 
-- `repo-registry`：权威仓库登记与治理台账；私有对照为 `repo-registry-private`。
+- `repo-registry`：权威仓库登记与治理台账；另设同名私有对照仓承接不可公开的数据。
 - `stars-index`：GitHub Star 收藏索引。
 
 Pages 影响已处理：GitHub 只对仓库链接做 301，**project site URL 不会重定向**。因此旧仓名
@@ -97,8 +97,8 @@ Pages 影响已处理：GitHub 只对仓库链接做 301，**project site URL �
 ## 7. 可见性与索引
 
 - 私有仓库的名称与描述不进入公开文档，只进入公开统计数字。
-- 索引层只有 `repo-registry`（公开）与 `repo-registry-private`（私有）维护仓库清单；其余页面是视图，冲突时以 `repo-registry` 为准。
-- `holtwood-arena` 的私有赛事仓库以 `arena-index/arena.yaml` 为**唯一事实源**；`repo-registry-private`
+- 索引层只有 `repo-registry`（公开）与其私有对照仓维护仓库清单；其余页面是视图，冲突时以 `repo-registry` 为准。
+- `holtwood-arena` 的私有赛事仓库以 `arena-index/arena.yaml` 为**唯一事实源**；私有对照仓
   只统计该账号的私有数量，不重复登记赛事仓。两处都出现时以 `arena.yaml` 为准。
 - 公开文档中出现性能数字时，必须绑定硬件、提交与测量方式；无复现路径的数字标注为"未独立复现"。
 - **有 Pages 站点的仓库必须填 homepage**，且指向当前组织名下的 URL。组织改名不会重定向项目站点，
@@ -125,7 +125,7 @@ Pages 影响已处理：GitHub 只对仓库链接做 301，**project site URL �
 
 已完成：`open-genomics` → `holtwood-genomics` 组织改名（2026-11-19）。本地目录、13 个仓库的 `origin`、Pages 域名引用与索引数据均已同步；旧项目站点不重定向，因此文档中的 `*.github.io` 必须使用新域名。
 
-已收敛（勿重复讨论）：`repo-registry` / `stars-index` 保留原名（§6）；`career-prep` 归个人号、`ai-infra-interview-prep` 归档；竞赛仓一律进 `holtwood-arena`。
+已收敛（勿重复讨论）：`repo-registry` / `stars-index` 保留原名（§6）；个人执行材料归私有仓、旧面试材料仓已归档；竞赛仓一律进 `holtwood-arena`。
 
 ## 10. 本地工作区
 
@@ -146,6 +146,6 @@ Pages 影响已处理：GitHub 只对仓库链接做 301，**project site URL �
 - 例外：`holtwood-arena/flagos/` 是 FlagOS 系列的内部分组容器，具体仓库与路径由
   `arena-index/arena.yaml` 的 `local_dir` 定义；账号目录下不再平铺 `flagos-s2-*`。
 - 未版本控制的工作区属于**风险项**：2026-11 发现 `holtwood-arena/amd`（AMD AI League，160 MB、
-  34 个源文件）从未 `git init`，已建为私有仓 `amd-2026-ai-league`。新工作区应第一天就建仓。
+  34 个源文件）从未 `git init`，已建为同名私有仓。新工作区应第一天就建仓。
 - **归档仓库仍需修文档时**（如组织改名导致的死链）：临时 `archived=false` → 推送 → 立即恢复
   `archived=true`；若分支保护要求状态检查，则走分支 + PR，不直接改默认分支。
