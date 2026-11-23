@@ -15,7 +15,7 @@
 审计日期与总量以下方徽章为准（由 `scripts/audit.py` 刷新，方法见 [methodology.md](methodology.md)）。
 
 <!-- AUTO:start badges -->
-![审计日期](https://img.shields.io/badge/审计-2026--11--20-4c9) ![仓库总数](https://img.shields.io/badge/仓库-151-4c9) ![公开](https://img.shields.io/badge/公开-92-blue) ![Fork](https://img.shields.io/badge/Fork-31-orange) ![竞赛](https://img.shields.io/badge/竞赛-3-blue) ![赛题](https://img.shields.io/badge/赛题-15-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
+![审计日期](https://img.shields.io/badge/审计-2026--11--23-4c9) ![仓库总数](https://img.shields.io/badge/仓库-151-4c9) ![公开](https://img.shields.io/badge/公开-92-blue) ![Fork](https://img.shields.io/badge/Fork-31-orange) ![竞赛](https://img.shields.io/badge/竞赛-3-blue) ![赛题](https://img.shields.io/badge/赛题-15-orange) ![文档站](https://img.shields.io/badge/文档站-docsify-8A2BE2)
 <!-- AUTO:end badges -->
 
 ## 🧭 架构
